@@ -107,14 +107,46 @@
             font-size: 30px;
             font-weight: 300;
         }
+        h3 {
+   
+    	    font-size: 24px;
+            margin: 0;
+            padding: 20px 0 10px 10px;
+            color: #33556d!important;
+    	}
+        li p {
+            padding: 0px 0 0px 10px;
+            color: #333!important;
+        }
+        h4 {
+            font-size: 20px;
+            font-weight: 300;
+        }
+        h5 {
+            font-size: 30px;
+            font-weight: 300;
+        }        
         p {
             font-weight: 300;
             line-height: 1.5em;
             font-size: 16px;
         }
+        li {
+            line-height: 1.6em;
+            color: #33556d !important;
+        }
+        ul.bull {
+            list-style-image: url('images/bullet_check_medium.png');
+            list-style-type: circle;
+            vertical-align: middle;
+        }
         .gray {
             color: #33556d !important;
         }
+        .pad_b_bull {
+            padding-bottom:15px;
+        }
+  
         .footer {
             background-color:#22263f;
             color:#ffffff;
@@ -176,9 +208,6 @@
         a:hover {
         outline: 0;
         }
-        abbr[title] {
-        border-bottom: 1px dotted;
-        }
         b,
         strong {
         font-weight: bold;
@@ -188,7 +217,7 @@
         }
         mark {
         background: #ff0;
-        color: #000;
+        color: #ff0000;
         }
         small {
         font-size: 80%;
@@ -262,6 +291,10 @@ div.cq-colctrl-lt1-c0 {
   margin-bottom: 30px;
 }
 @media (min-width: 768px) {
+    .twocol {
+    flex-direction: row;
+    display: flex;;
+}
   div.cq-colctrl-lt1-c0, div.cq-colctrl-lt0-c0 {
     display: table-cell;
     vertical-align: top;
@@ -269,6 +302,13 @@ div.cq-colctrl-lt1-c0 {
     padding-right: 10px;
     margin-bottom: 0;
   }
+  div.cq-colctrl-lt0-c0 {
+    display: table-cell;
+    vertical-align: top;
+    width: 49%;
+    padding-right: 20px;
+    margin-bottom: 0;
+}
 }
 div.cq-colctrl-lt1-c1 {
   width: 100%;
@@ -283,9 +323,7 @@ div.cq-colctrl-lt1-c1 {
     padding: 0 10px;
     margin-bottom: 0;
   }
-  div.cq-colctrl-lt1-c1.bm-border_left {
-    border-left: 1px solid #e5e5e5;
-  }
+
 }
 div.cq-colctrl-lt1-c2 {
   width: 100%;
@@ -324,6 +362,9 @@ div.cq-colctrl-lt1-c2 {
             padding-left: 0 !important;
             padding-right: 0 !important;
             margin: 0;
+        }
+        .pad_sm {
+            padding: 0 30px !important;
         }
     }
 }
@@ -408,157 +449,488 @@ div.cq-colctrl-lt1-c2 {
         <div class="compCont">
             <div class="" style="padding: 40px 0 0px;">
                 <h1 class="h1" style="padding: 0 0 0px; font-weight: thin;">
-                    <span style="white-space: nowrap;">SurvivorSupport<sup style="font-size: 34px; line-height: 1em;">®</sup>
+                    <span style="white-space: nowrap;">
+                        SurvivorSupport&zwj;<sup style="font-size: 34px; line-height: 1em;">®</sup>
                     </span>
+                </div>
+                <div class="" style="padding: 10px 0 120px;">
+                    <p>Specialized guidance to help you or your family navigate financial decisions after the loss of a loved one.</p>
+                </div>
             </div>
-            <div class="" style="padding: 10px 0 120px;">
-                <p>Specialized guidance to help you or your family navigate financial decisions after the loss of a loved one.</p>
+            <div class="compCont" bgcolor="#F7FAFF" style="background-color: #F7FAFF;">
+                <div>
+                    <h2 class="h2" style="padding: 60px 0 20px; margin: 0;">Personal financial planning through a dedicated advisor—when you need it most</h2>
+                    <p style="padding: 0 0 0px;">
+                        SurvivorSupport, a benefit offered through employers, provides specialized guidance to help you or those you love navigate personal financial decisions during a time of grief.
+                    </p>
+                    <p style="padding: 0 0 40px;">
+                        Our SurvivorSupport advisors can coordinate with human resources teams, your family's attorney, accountant and insurance agent and brokers, to simplify financial planning at a time when you or your family may feel overwhelmed with difficult decisions. Our goal is to provide a sense of stability and a forward-looking personal financial plan, with an empathetic touch.
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="compCont" bgcolor="#F7FAFF" style="background-color: #F7FAFF;">
-            <div >
-                <h2 class="h2" style="padding: 60px 0 20px; margin: 0;">Personal financial planning through a dedicated advisor—when you need it most</h2>
-                <p style="padding: 0 0 0px;">
-                    SurvivorSupport, a benefit offered through employers, provides specialized guidance to help you or those you love navigate personal financial decisions during a time of grief.
+            <div class="compCont">
+                <h2 class="h2" style="padding: 50px 0 20px;">Supporting survivors as they manage tough decisions after losing a loved one</h2>
+                <p style="padding: 0 0 40px; color: #676879;" color="#676879">
+                    <span style="color: #676879;">Our trained specialists leverage expertise across Goldman Sachs to help those working through a tragic loss gain clarity, confidence and control over their financial decisions.</span>
                 </p>
-                <p style="padding: 0 0 40px;">
-                    Our SurvivorSupport advisors can coordinate with human resources teams, your family's attorney, accountant and insurance agent and brokers, to simplify financial planning at a time when you or your family may feel overwhelmed with difficult decisions. Our goal is to provide a sense of stability and a forward-looking personal financial plan, with an empathetic touch.
-                </p>
             </div>
-        </div>
-
-
-
-
-
-        <div class="compCont">
-            <h2 class="h2" style="padding: 50px 0 20px;">Supporting survivors as they manage tough decisions after losing a loved one</h2>
-            <p style="padding: 0 0 40px; color: #676879;" color="#676879">
-                <span style="color: #676879;">Our trained specialists leverage expertise across Goldman Sachs to help those working through a tragic loss gain clarity, confidence and control over their financial decisions.</span>
-            </p>
-        </div>
-        <!-- 3 col -->
-        <div class="compCont">
-        <div style="padding: 0 0 40px;" class="compCont parsys_column bm-margin_btm cq-colctrl-lt1">
-            <div class="parsys_column bm-margin_btm cq-colctrl-lt1-c0">
-                <div class="background_f7b5c178-1ac5-4ccc-941f-8e1cd26fc184 ">
-                    <div class="bgComp bm-bg_gray  bm-topSpacing_none" style="background-color: rgba(247, 250, 255, 1.0);">
-                        <div class="compCont" >
-                            <div data-class-name="customImage" align="center" class="imageComp gm-textAlign_center">
-                                <img
-                                    src="https://www.ayco.com/content/ayco/us/en/employees/survivor-support/_jcr_content/main_content_top_par/public/main_content_top_par/background_793360689/background/background/background/image.img.png/1646942130924.png"
-                                    alt="One-on-one sessions"
-                                    title="One-on-one sessions"
-                                    class="imageComp__img  cq-dd-image"
-                                    loading="lazy"
-                                    data-emptytext="Image"
-                                >
+            <!-- 3 col -->
+            <div class="compCont">
+                <div style="padding: 0 0 40px;" class="compCont parsys_column bm-margin_btm cq-colctrl-lt1">
+                    <div class="parsys_column bm-margin_btm cq-colctrl-lt1-c0">
+                        <div class="background_f7b5c178-1ac5-4ccc-941f-8e1cd26fc184 ">
+                            <div class="bgComp bm-bg_gray  bm-topSpacing_none" style="background-color: rgba(247, 250, 255, 1.0);">
+                                <div class="compCont">
+                                    <div data-class-name="customImage" align="center" class="imageComp gm-textAlign_center">
+                                        <img
+                                            src="https://www.ayco.com/content/ayco/us/en/employees/survivor-support/_jcr_content/main_content_top_par/public/main_content_top_par/background_793360689/background/background/background/image.img.png/1646942130924.png"
+                                            alt="One-on-one sessions"
+                                            title="One-on-one sessions"
+                                            class="imageComp__img  cq-dd-image"
+                                            loading="lazy"
+                                            data-emptytext="Image" valign="middle" 
+                                        >
+                                    </div>
+                                </div>
+                                <div class="compCont" style="padding: 20px 30px 0;">
+                                    <div data-tracking-context="Rich Text Editor" class="text_879591258_3e4404c6-66c9-428a-b6ac-c50ed44d4872 richText bm-type_articleBody bm-spacing_after bm-colCount_1 dis12px bm-table_default  percent100 ">
+                                        <h3 style="text-align: center;">
+                                            <span style="font-size: 26px; padding: 0 0 20px;">One-on-one sessions</span>
+                                        </h3>
+                                        <p style="text-align: center;">
+                                            <span style="color: #676879;">When ready, you or your loved ones are connected to an advisor who specializes in helping families through these difficult situations. Our advisors understand the financial decisions that need be made, and how to design a plan to make them.</span>
+                                        </p>
+                                        <p style="text-align: center;">&nbsp;</p>
+                                        <p style="text-align: center;">&nbsp;</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="compCont" style="padding: 20px 30px 0;">
-                            <div data-tracking-context="Rich Text Editor" class="text_879591258_3e4404c6-66c9-428a-b6ac-c50ed44d4872 richText bm-type_articleBody bm-spacing_after bm-colCount_1 dis12px bm-table_default  percent100 ">
-                                <h3 style="text-align: center;">
-                                    <span style="font-size: 26px; padding: 0 0 20px;">One-on-one sessions</span>
-                                </h3>
-                                <p style="text-align: center;">
-                                    <span style="color: #676879;">When ready, you or your loved ones are connected to an advisor who specializes in helping families through these difficult situations. Our advisors understand the financial decisions that need be made, and how to design a plan to make them.</span>
-                                </p>
-                                <p style="text-align: center;">&nbsp;</p>
-                                <p style="text-align: center;">&nbsp;</p>
+                    </div>
+                    <div class="parsys_column bm-margin_btm cq-colctrl-lt1-c1">
+                        <div class="background_copy_a58fc2ec-53c4-409f-babd-dc88b81c4e78 ">
+                            <div class="bgComp bm-bg_gray  bm-topSpacing_none" style="background-color: rgba(247, 250, 255, 1.0);">
+                                <div class="compCont">
+                                    <div data-class-name="customImage" class="imageComp gm-textAlign_center  " align="center">
+                                        <img
+                                            src="https://www.ayco.com/content/ayco/us/en/employees/survivor-support/_jcr_content/main_content_top_par/public/main_content_top_par/background_793360689/background/background_copy/background/image.img.png/1635259868573.png"
+                                            alt="Personal financial plan"
+                                            title="Investments - small"
+                                            class="imageComp__img  cq-dd-image"
+                                            loading="lazy"
+                                            data-emptytext="Image" valign="middle" style="padding: 8px 0 0;"
+                                        >
+                                    </div>
+                                </div>
+                                <div class="compCont" style="padding: 20px 30px 0;">
+                                    <div data-tracking-context="Rich Text Editor" class="text_879591258_copy_25643833-ffa7-4ef5-b55a-45b7bc001b25 richText bm-type_articleBody bm-spacing_after bm-colCount_1 dis12px bm-table_default  percent100 " align="center">
+                                        <h3 style="text-align: center;">
+                                            <span style="font-size: 26px; padding: 0 0 20px;">Personal financial plan</span>
+                                        </h3>
+                                        <p style="text-align: center;">
+                                            <span style="color: #676879;">We'll provide a personalized action items checklist that outlines next steps, and helps to prioritize planning topics to be discussed during the follow-up portion of the service.</span>
+                                        </p>
+                                        <p style="text-align: center;">&nbsp;</p>
+                                        <p style="text-align: center;">&nbsp;</p>
+                                        <p style="text-align: center;">&nbsp;</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="parsys_column bm-margin_btm cq-colctrl-lt1-c2">
+                        <div class="background_copy_copy_5ac28877-477f-4d8c-89f7-6cce3f2cfaec ">
+                            <div class="bgComp bm-bg_gray  bm-topSpacing_none" style="background-color: rgba(247, 250, 255, 1.0);">
+                                <div class="compCont">
+                                    <div data-class-name="customImage" class="imageComp gm-textAlign_center  " align="center">
+                                        <img
+                                            src="https://www.ayco.com/content/ayco/us/en/employees/survivor-support/_jcr_content/main_content_top_par/public/main_content_top_par/background_793360689/background/background_copy_copy/background/image.img.png/1646941614846.png"
+                                            alt="Follow-up Support"
+                                            title="Manage Wealth"
+                                            class="imageComp__img  cq-dd-image"
+                                            loading="lazy"
+                                            data-emptytext="Image" valign="middle" style="padding: 8px 0 0;"
+                                        >
+                                    </div>
+                                </div>
+                                <div class="compCont" style="padding: 20px 30px 0;">
+                                    <div data-tracking-context="Rich Text Editor" class="text_879591258_dd7937be-884a-466f-8dbb-df9d60f3b4ae richText bm-type_articleBody bm-spacing_after bm-colCount_1 dis12px bm-table_default  percent100 ">
+                                        <h3 style="text-align: center;">
+                                            <span style="font-size: 26px; padding: 0 0 20px;">Follow-up support</span>
+                                        </h3>
+                                        <p style="text-align: center;">
+                                            <span style="color: #676879;">Our dedicated team is there to provide support and answer questions for at least six months (terms vary by plan). During and after this time, you can also work with a Goldman Sachs Ayco advisor to design a comprehensive financial plan based on your unique goals and receive ongoing guidance.*</span>
+                                        </p>
+                                        <p style="text-align: center;">&nbsp;</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="parsys_column bm-margin_btm cq-colctrl-lt1-c1">
-                <div class="background_copy_a58fc2ec-53c4-409f-babd-dc88b81c4e78 ">
-                    <div class="bgComp bm-bg_gray  bm-topSpacing_none" style="background-color: rgba(247, 250, 255, 1.0);">
+            <!-- 3 col -->
+        </div>
+        <!-- <div align="center" style="padding: 0 0 0 0;">
+            <a href="https://www.ayco.com/homepage.html" alt="Goldman Sachs Ayco">
+                <img width="100%" src="images/financial_counseling_benefits.png">
+            </a>
+        </div> -->
+        <style>
+            @media (min-width: 768px) {
+                .background_793360689_c5d3d7b9-5c21-4986-b33b-4ba56836cef2.bm-bgSize__custom > .bgComp {
+                    width: 100%;
+                }
+            }
+        </style>
+        <div>
+            <div class="compCont pad_b_bull" style="background-color: rgba(247, 250, 255, 1.0);padding: 0 0 3em;" >
+                <div class="compCont " style="padding: 3em 1em;">
+                    <div >
+                        <h2 style="text-align: center; color: #33556d;">
+                            <span style="text-align: center; color: #33556d;">SurvivorSupport advisors provide one-on-one financial counseling on&nbsp;company benefits and a wide range of topics, including:</span>
+                        </h2>
+                    </div>
+                </div>
+                <style>
+    .text_99e5a54f-ba13-4e4a-afe0-17db097b7a6a.richText h1, 
+    .text_99e5a54f-ba13-4e4a-afe0-17db097b7a6a.richText h2,
+    .text_99e5a54f-ba13-4e4a-afe0-17db097b7a6a.richText h3,
+    .text_99e5a54f-ba13-4e4a-afe0-17db097b7a6a.richText h4,
+    .text_99e5a54f-ba13-4e4a-afe0-17db097b7a6a.richText h5,
+    .text_99e5a54f-ba13-4e4a-afe0-17db097b7a6a.richText h6,
+    .text_99e5a54f-ba13-4e4a-afe0-17db097b7a6a.richText blockquote,
+    .text_99e5a54f-ba13-4e4a-afe0-17db097b7a6a.richText address,
+    .text_99e5a54f-ba13-4e4a-afe0-17db097b7a6a.richText pre {
+        color: #!important;
+    }
+    .text_99e5a54f-ba13-4e4a-afe0-17db097b7a6a.richText.bm-type_articleBody p,
+    .text_99e5a54f-ba13-4e4a-afe0-17db097b7a6a.richText.bm-type_regularBody p,
+    .text_99e5a54f-ba13-4e4a-afe0-17db097b7a6a.richText.bm-type_articleBody li,
+    .text_99e5a54f-ba13-4e4a-afe0-17db097b7a6a.richText.bm-type_regularBody li,
+    .text_99e5a54f-ba13-4e4a-afe0-17db097b7a6a.bm-type_disclaimer p,
+    .text_99e5a54f-ba13-4e4a-afe0-17db097b7a6a.bm-type_disclaimer li {
+        color: #!important;
+    }
+                </style>
+                <div class="parsys_column cq-colctrl-lt0">
+                    <div class="compCont parsys_column cq-colctrl-lt0-c0">
+                        <div class="">
+                            <div data-tracking-context="Rich Text Editor" class="text_959016709_1d850c25-b395-40db-941d-dfc728ade2c5 richText bm-type_articleBody bm-spacing_none bm-colCount_1 dis12px bm-table_default  percent100 ">
+                                <h4>Employee benefits</h4>
+                                <ul>
+                                    <li>Life insurance and possible uses for proceeds</li>
+                                    <li>Retirement accounts including 401(k)/403(b) and/or pension</li>
+                                    <li>Stock accounts including stock options, RSUs, ESPP, ESOP</li>
+                                    <li>Health care considerations and COBRA</li>
+                                </ul>
+                                <h4>Social Security and Medicare</h4>
+                                <ul>
+                                    <li>Understanding death and survivor benefits and taxation</li>
+                                    <li>Understanding the impact of working while receiving benefits</li>
+                                    <li>Understanding Medicare and what plans may be appropriate</li>
+                                </ul>
+                                <h4>Insurance</h4>
+                                <ul>
+                                    <li>Identifying life insurance coverage needs</li>
+                                    <li>Identifying disability insurance coverage needs</li>
+                                    <li>Updating auto and homeowner’s/renter’s insurance</li>
+                                </ul>
+                                <h4>Education funding</h4>
+                                <ul>
+                                    <li>Understanding the cost of higher education</li>
+                                    <li>Evaluating different savings vehicles</li>
+                                    <li>Incorporating education funding goals into a comprehensive financial plan</li>
+                                </ul>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <style>
+    .text_959016709_1d850c25-b395-40db-941d-dfc728ade2c5.richText h1, 
+    .text_959016709_1d850c25-b395-40db-941d-dfc728ade2c5.richText h2,
+    .text_959016709_1d850c25-b395-40db-941d-dfc728ade2c5.richText h3,
+    .text_959016709_1d850c25-b395-40db-941d-dfc728ade2c5.richText h4,
+    .text_959016709_1d850c25-b395-40db-941d-dfc728ade2c5.richText h5,
+    .text_959016709_1d850c25-b395-40db-941d-dfc728ade2c5.richText h6,
+    .text_959016709_1d850c25-b395-40db-941d-dfc728ade2c5.richText blockquote,
+    .text_959016709_1d850c25-b395-40db-941d-dfc728ade2c5.richText address,
+    .text_959016709_1d850c25-b395-40db-941d-dfc728ade2c5.richText pre {
+        color: #2178C4!important;
+    }
+    .text_959016709_1d850c25-b395-40db-941d-dfc728ade2c5.richText.bm-type_articleBody p,
+    .text_959016709_1d850c25-b395-40db-941d-dfc728ade2c5.richText.bm-type_regularBody p,
+    .text_959016709_1d850c25-b395-40db-941d-dfc728ade2c5.richText.bm-type_articleBody li,
+    .text_959016709_1d850c25-b395-40db-941d-dfc728ade2c5.richText.bm-type_regularBody li,
+    .text_959016709_1d850c25-b395-40db-941d-dfc728ade2c5.bm-type_disclaimer p,
+    .text_959016709_1d850c25-b395-40db-941d-dfc728ade2c5.bm-type_disclaimer li {
+        color: #!important;
+    }
+                        </style>
+                    </div>
+                    <div class="parsys_column cq-colctrl-lt0-c1">
                         <div class="compCont">
-                            <div data-class-name="customImage" class="imageComp gm-textAlign_center  " align="center">
-                                <img
-                                    src="https://www.ayco.com/content/ayco/us/en/employees/survivor-support/_jcr_content/main_content_top_par/public/main_content_top_par/background_793360689/background/background_copy/background/image.img.png/1635259868573.png"
-                                    alt="Personal financial plan"
-                                    title="Investments - small"
-                                    class="imageComp__img  cq-dd-image"
-                                    loading="lazy"
-                                    data-emptytext="Image"
-                                >
+                            <div data-tracking-context="Rich Text Editor" class="text_796021241_e2004659-4683-4a5a-9d6e-8c7a2b749828 richText bm-type_articleBody bm-spacing_none bm-colCount_1 dis12px bm-table_default  percent100 ">
+                                <h4>Estate settlement</h4>
+                                <ul>
+                                    <li>Understanding probate and if it applies</li>
+                                    <li>Deciding whether to use an attorney</li>
+                                    <li>Understanding how assets pass and how debts may be resolved</li>
+                                </ul>
+                                <h4>Income taxes</h4>
+                                <ul>
+                                    <li>Identifying what returns need to be filed including estate and inheritance tax returns</li>
+                                    <li>Understanding the impact of decisions</li>
+                                </ul>
+                                <h4>Retirement/long-term cash-flow planning</h4>
+                                <ul>
+                                    <li>Determining income needs in retirement</li>
+                                    <li>Identifying sources of income in retirement</li>
+                                    <li>Understanding what changes, if any, may need to be made in order to meet retirement goals</li>
+                                </ul>
+                                <h4>Estate planning</h4>
+                                <ul>
+                                    <li>Understanding what makes up an estate</li>
+                                    <li>Learning how advanced directives play a part of an estate plan</li>
+                                    <li>Identifying next steps to create an appropriate estate plan</li>
+                                </ul>
                             </div>
+                            <div class="clear"></div>
                         </div>
-                        <div class="compCont" style="padding: 20px 30px 0;">
-                            <div data-tracking-context="Rich Text Editor" class="text_879591258_copy_25643833-ffa7-4ef5-b55a-45b7bc001b25 richText bm-type_articleBody bm-spacing_after bm-colCount_1 dis12px bm-table_default  percent100 " align="center">
-                                <h3 style="text-align: center;">
-                                    <span style="font-size: 26px; padding: 0 0 20px;">Personal financial plan</span>
-                                </h3>
-                                <p style="text-align: center;">
-                                    <span style="color: #676879;">We'll provide a personalized action items checklist that outlines next steps, and helps to prioritize planning topics to be discussed during the follow-up portion of the service.</span>
-                                </p>
-                                <p style="text-align: center;">&nbsp;</p>
-                                <p style="text-align: center;">&nbsp;</p>
-                                <p style="text-align: center;">&nbsp;</p>
-                            </div>
-                        </div>
+                        <style>
+    .text_796021241_e2004659-4683-4a5a-9d6e-8c7a2b749828.richText h1, 
+    .text_796021241_e2004659-4683-4a5a-9d6e-8c7a2b749828.richText h2,
+    .text_796021241_e2004659-4683-4a5a-9d6e-8c7a2b749828.richText h3,
+    .text_796021241_e2004659-4683-4a5a-9d6e-8c7a2b749828.richText h4,
+    .text_796021241_e2004659-4683-4a5a-9d6e-8c7a2b749828.richText h5,
+    .text_796021241_e2004659-4683-4a5a-9d6e-8c7a2b749828.richText h6,
+    .text_796021241_e2004659-4683-4a5a-9d6e-8c7a2b749828.richText blockquote,
+    .text_796021241_e2004659-4683-4a5a-9d6e-8c7a2b749828.richText address,
+    .text_796021241_e2004659-4683-4a5a-9d6e-8c7a2b749828.richText pre {
+        color: #2178C4!important;
+    }
+    .text_796021241_e2004659-4683-4a5a-9d6e-8c7a2b749828.richText.bm-type_articleBody p,
+    .text_796021241_e2004659-4683-4a5a-9d6e-8c7a2b749828.richText.bm-type_regularBody p,
+    .text_796021241_e2004659-4683-4a5a-9d6e-8c7a2b749828.richText.bm-type_articleBody li,
+    .text_796021241_e2004659-4683-4a5a-9d6e-8c7a2b749828.richText.bm-type_regularBody li,
+    .text_796021241_e2004659-4683-4a5a-9d6e-8c7a2b749828.bm-type_disclaimer p,
+    .text_796021241_e2004659-4683-4a5a-9d6e-8c7a2b749828.bm-type_disclaimer li {
+        color: #!important;
+    }
+                        </style>
                     </div>
                 </div>
+                <div style="clear:both"></div>
+                <style>
+        .spacer-component-cdbdc87f-4fd1-45c2-b980-d8e4401403df {
+            margin: 0px;
+            
+            margin-bottom: 70px;
+            
+            border: none;
+        }
+        
+          @media screen and (min-width: 768px) {
+              .spacer-component-cdbdc87f-4fd1-45c2-b980-d8e4401403df{
+                margin-bottom: 70px;
+            }
+          }
+          
+          
+          @media screen and (min-width: 1024px) {
+            .spacer-component-cdbdc87f-4fd1-45c2-b980-d8e4401403df{
+                margin-bottom: 70px;
+            }
+            .bm-bgSize__content, .bm-bgSize__custom {
+    padding: 0 40px;
+}
+          }
+                </style>
             </div>
-            <div class="parsys_column bm-margin_btm cq-colctrl-lt1-c2">
-                <div class="background_copy_copy_5ac28877-477f-4d8c-89f7-6cce3f2cfaec ">
-                    <div class="bgComp bm-bg_gray  bm-topSpacing_none" style="background-color: rgba(247, 250, 255, 1.0);">
-                        <div class="compCont">
-                            <div data-class-name="customImage" class="imageComp gm-textAlign_center  " align="center">
-                                <img
-                                    src="https://www.ayco.com/content/ayco/us/en/employees/survivor-support/_jcr_content/main_content_top_par/public/main_content_top_par/background_793360689/background/background_copy_copy/background/image.img.png/1646941614846.png"
-                                    alt="Follow-up Support"
-                                    title="Manage Wealth"
-                                    class="imageComp__img  cq-dd-image"
-                                    loading="lazy"
-                                    data-emptytext="Image"
-                                >
-                            </div>
-                        </div>
-                        <div class="compCont" style="padding: 20px 30px 0;">
-                            <div data-tracking-context="Rich Text Editor" class="text_879591258_dd7937be-884a-466f-8dbb-df9d60f3b4ae richText bm-type_articleBody bm-spacing_after bm-colCount_1 dis12px bm-table_default  percent100 ">
-                                <h3 style="text-align: center;">
-                                    <span style="font-size: 26px; padding: 0 0 20px;">Follow-up support</span>
-                                </h3>
-                                <p style="text-align: center;">
-                                    <span style="color: #676879;">Our dedicated team is there to provide support and answer questions for at least six months (terms vary by plan). During and after this time, you can also work with a Goldman Sachs Ayco advisor to design a comprehensive financial plan based on your unique goals and receive ongoing guidance.*</span>
-                                </p>
-                                <p style="text-align: center;">&nbsp;</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        
+        </div>
+        <div class="compCont" style="padding: 6em 0 2em;">
+            <div>
+                <h5 style="text-align: center; color: #33556d; ">Benefits of working with a SurvivorSupport Advisor</h5>
             </div>
         </div>
-        </div>
-        <!-- 3 col -->
+        <div class="background_2103890026_74e33486-1445-4480-ad62-6b78505f5569 " style="padding: 0 0 3em;">
+	
+	
+
+	
+
+	
+            <div class="bgComp bm-bg_gray bm-type_withBtmSpacing bm-topSpacing_default" style="background-color: rgba(255, 255, 255, 1.0);">
+                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+ 
+    
+    
+    <style>
+    .text_531a7adf-e80c-442c-a1eb-d1a7a65db59a.richText h1, 
+    .text_531a7adf-e80c-442c-a1eb-d1a7a65db59a.richText h2,
+    .text_531a7adf-e80c-442c-a1eb-d1a7a65db59a.richText h3,
+    .text_531a7adf-e80c-442c-a1eb-d1a7a65db59a.richText h4,
+    .text_531a7adf-e80c-442c-a1eb-d1a7a65db59a.richText h5,
+    .text_531a7adf-e80c-442c-a1eb-d1a7a65db59a.richText h6,
+    .text_531a7adf-e80c-442c-a1eb-d1a7a65db59a.richText blockquote,
+    .text_531a7adf-e80c-442c-a1eb-d1a7a65db59a.richText address,
+    .text_531a7adf-e80c-442c-a1eb-d1a7a65db59a.richText pre {
+        color: #!important;
+    }
+    .text_531a7adf-e80c-442c-a1eb-d1a7a65db59a.richText.bm-type_articleBody p,
+    .text_531a7adf-e80c-442c-a1eb-d1a7a65db59a.richText.bm-type_regularBody p,
+    .text_531a7adf-e80c-442c-a1eb-d1a7a65db59a.richText.bm-type_articleBody li,
+    .text_531a7adf-e80c-442c-a1eb-d1a7a65db59a.richText.bm-type_regularBody li,
+    .text_531a7adf-e80c-442c-a1eb-d1a7a65db59a.bm-type_disclaimer p,
+    .text_531a7adf-e80c-442c-a1eb-d1a7a65db59a.bm-type_disclaimer li {
+        color: #!important;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </style>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+       
+    
+    <link rel="stylesheet" href="/etc/clientlibs/gs-clientlibs/external-libs/jQuery.min.css" type="text/css">
+    <script src="/etc/clientlibs/gs-clientlibs/external-libs/jQuery.min.js"></script>
+    
+    <script src="/etc.clientlibs/clientlibs/granite/jquery.min.js"></script>
+    <script src="/etc.clientlibs/clientlibs/granite/utils.min.js"></script>
+    <script src="/etc.clientlibs/clientlibs/granite/jquery/granite.min.js"></script>
+    <script src="/etc.clientlibs/foundation/clientlibs/jquery.min.js"></script>
+    <script src="/etc.clientlibs/foundation/clientlibs/shared.min.js"></script>
+    
+    <script>
+        /**
+        *On page load, extract relevant elements from component head section 
+        *and append them to main page head section.  
+        */
+        $(document).ready(function()
+        {
+            $('.htmlContent').find('meta').remove();
+            $('.htmlContent').find('title').remove();
+            $('head').append($('.htmlContent').find('script'));
+            $('head').append($('.htmlContent').find('style'));
+            $('.htmlContent').find('script').remove();
+            $('.htmlContent').find('style').remove();           
+        });
+    
+    </script> 
+    
+    
+        <div class="htmlContent gm-pos_relative">
+    
+    
+    <div class="compCont bm-bgSize__content ">
+      <div class=" twocol">
+
+
+
+
+        <div class="onecol">
+         
+            <ul class="bull">
+        <li>
+     
+          <h3>State-specific guidance</h3>
+          <p>Assistance navigating unique estate-settlement considerations for your state.</p>
+     
+        </li>
+        <li>
+          <h3>Potential cost savings</h3>
+          <p>Organization may save you on attorney and court fees.</p>
+        </li>
+        <li>
+          <h3>Asset transfer</h3>
+          <p>An advisor can help you access and transfer assets and handle any debts left behind.</p>
+        </li>
+      </ul>
+    </div>
+    <div class="onecol">
+            <ul class="bull">
+        <li>
+          <h3>Tax considerations</h3>
+          <p>Tax-efficient decisions can help you get the financial support you need.</p>
+        </li>
+        <li>
+          <h3>Take action</h3>
+          <p>Develop and implement a comprehensive, personal financial plan.</p>
+        </li>
+      </ul>
     </div>
 
-    <div align="center" style="padding: 0 0 0 0;">
-        <a href="https://www.ayco.com/homepage.html" alt="Goldman Sachs Ayco">
-            <img width="100%" src="images/financial_counseling_benefits.png">
-        </a>
+
+        
+      </div>
     </div>
- 
-            <div class="compCont" style="padding: 6em 0 0em;">
-                <div >
-                    <h2 class="h2" style="text-align: center; color: #33556d; ">Benefits of working with a SurvivorSupport Advisor</h2>
-                </div>
+       
+        </div>      
+            
+    
             </div>
-            <div align="center" style="padding: 0em 0 9em;">
-                <a href="https://www.ayco.com/homepage.html" alt="Goldman Sachs Ayco">
-                    <img width="100%" src="images/advisor_benefits.png">
-                </a>
-            </div>
- 
-    <div class="background_660482234_67dec8cb-9f4d-4447-ab0a-9d254e064f70 ">
-        <div class="bgComp bm-bg_gray  Default" style="background-color: rgba(255, 255, 255, 1.0);">
-            <div class="">
-                <div class="compCont" style="padding: 3em;background-color: rgba(61, 75, 149, 1.0);">
-                    <div class="" style="padding: 30px 0;">
-                   
-                        
+        
+    
+    </div>
+        <div class="background_660482234_67dec8cb-9f4d-4447-ab0a-9d254e064f70 " style="">
+            <div class="bgComp bm-bg_gray  Default" style="background-color: rgba(255, 255, 255, 1.0);padding: 0 0 3em;">
+                <div class="">
+                    <div class="compCont" style="padding: 3em;background-color: rgba(61, 75, 149, 1.0);">
+                        <div class="" style="padding: 30px 0;">
                             <h2 class="h2" style="text-align: center; color: #ffffff; ">If you have access to SurvivorSupport and want to speak with an advisor, please reach out and let us know to connect you with the SurvivorSupport team.</h2>
                         </div>
                         <style>
@@ -579,6 +951,10 @@ div.cq-colctrl-lt1-c2 {
 }
 
 @media (min-width: 768px) {
+    .onecol {
+    padding: 40px;
+    width: 50%;
+}
 .blueButton_v2 {
     padding: 14px 29px 13px;
     letter-spacing: 2px;
@@ -601,7 +977,6 @@ div.cq-colctrl-lt1-c2 {
 }
                         </style>
                         <div align="center" class="aycoButton gm-textAlign_center" style="padding: 0 0 4em">
-      
                             <div class="buttonContainer">
                                 <a href="https://www.ayco.com/contact-us.html" target="_self">
                                     <button style="background-color:#2178c4; border-color: #2178c4; color: #fff;">
@@ -609,34 +984,32 @@ div.cq-colctrl-lt1-c2 {
                                     </button>
                                 </a>
                             </div>
-                        
-                    
-                </div>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
     <div class="background_2051090952_5bb4c594-6734-4ddf-aa2d-b4e0163d8ea2 ">
         <div class="compCont">
-        
             <div class="" style="">
                 <div>
-                    <h2 class="h2 " style="color: #2178C4;padding: 30px 0 0;">Other services</h2><br>
+                    <h2 class="h2 " style="color: #2178C4;padding: 30px 0 0;">Other services</h2>
+                    <br>
                 </div>
                 <div>
-                    <p style="color: #33556d; margin: 0;">Once your affairs are in order, we can connect you with a Goldman Sachs Ayco financial advisor to support your and your family's goals over the long term.*</p><br><br>
+                    <p style="color: #33556d; margin: 0;">Once your affairs are in order, we can connect you with a Goldman Sachs Ayco financial advisor to support your and your family's goals over the long term.*</p>
+                    <br>
+                    <br>
                 </div>
             </div>
             <div class="">
-                <div class="footnote" style="padding: 0 0 4em;"><span style="font-size: 12px; line-height: 14px;">* Financial planning and other fees may apply when working with a Goldman Sachs Ayco advisor. For a complete description of all charges and fees, please see the Goldman Sachs &amp; Co. LLC Form ADV Part 2A or the Goldman Sachs Asset Management, L.P. Form ADV Part 2A or The Ayco Company, L.P. Form ADV Part 2A – Investment Management Services, available upon request.</span>
+                <div class="footnote" style="padding: 0 0 4em;">
+                    <span style="font-size: 12px; line-height: 14px;">* Financial planning and other fees may apply when working with a Goldman Sachs Ayco advisor. For a complete description of all charges and fees, please see the Goldman Sachs &amp; Co. LLC Form ADV Part 2A or the Goldman Sachs Asset Management, L.P. Form ADV Part 2A or The Ayco Company, L.P. Form ADV Part 2A – Investment Management Services, available upon request.</span>
                 </div>
-              
             </div>
         </div>
     </div>
-
     <!-- START FOOTER -->
     <footer>
         <div class="footer container-fluid">
@@ -710,6 +1083,5 @@ div.cq-colctrl-lt1-c2 {
         </div>
     </footer>
     <!-- END FOOTER -->
-
 </body>
 </html>
