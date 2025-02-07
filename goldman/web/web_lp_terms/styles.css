@@ -2,7 +2,8 @@
 /* USE BELOW */
 
 body {
-    font-family: 'Roboto', Arial, sans-serif;
+   /* font-family: 'Roboto', Arial, sans-serif; --> */
+    font-family: 'Basis Grotesque', Arial, sans-serif;
     color: rgba(103,104,121,.94);
     font-size: 16px;
     line-height: 24px;
