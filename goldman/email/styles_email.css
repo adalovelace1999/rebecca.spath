@@ -1,29 +1,38 @@
-a href{
-  text-decoration: none}
+a href {
+  text-decoration: none
+}
+
 /* Resolves webkit padding issue. */
 table {
-  border-spacing:0;
+  border-spacing: 0;
 }
+
 /* Resolves the Outlook 2007, 2010, and Gmail td padding issue. */
 table td {
-  border-collapse:collapse;
+  border-collapse: collapse;
 }
+
 /* Yahoo auto-sensing link color and border */
 .yshortcuts a {
   border-bottom: none !important;
 }
-img{
-  border:none !important;
+
+img {
+  border: none !important;
 }
+
 sup {
   line-height: 0;
   font-size: 65%;
 }
-sub {`
+
+sub {
   line-height: 0;
   font-size: 55%;
 }
-@media screen and (max-device-width: 600px), screen and (max-width: 600px) {
+
+@media screen and (max-device-width: 600px),
+screen and (max-width: 600px) {
   a[x-apple-data-detectors] {
     color: inherit !important;
     text-decoration: none !important;
@@ -32,8 +41,9 @@ sub {`
     font-weight: inherit !important;
     line-height: inherit !important;
   }
+
   /* Constrain email width for small screens */
-  .show{
+  .show {
     display: block !important;
     overflow: visible !important;
     width: 100% !important;
@@ -42,7 +52,9 @@ sub {`
     height: auto !important;
     max-width: inherit !important;
   }
-  td.hide, img.hide{
+
+  td.hide,
+  img.hide {
     display: none !important;
     visibility: hidden !important;
     font-size: 0 !important;
@@ -50,7 +62,9 @@ sub {`
     line-height: 0 !important;
     mso-hide: all !important;
   }
-  .force_col, table.force_col {
+
+  .force_col,
+  table.force_col {
     display: block !important;
     width: 100% !important;
     height: auto !important;
@@ -59,17 +73,21 @@ sub {`
     padding-left: 0px !important;
     padding-right: 0px !important;
   }
+
   .wrap {
     padding-left: 40px !important;
     padding-right: 40px !important;
   }
+
   .wrap0 {
     padding-left: 0px !important;
     padding-right: 0px !important;
   }
+
   .pad_t_20 {
     padding-top: 20px !important;
   }
+
   .pad_t_10 {
     padding-top: 10px !important;
   }
