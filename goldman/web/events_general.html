@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Headline</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link rel="stylesheet" href="https://engage.ayco.com/basisfont">
+  <link rel="stylesheet" href="https://engage.ayco.com/GSFonts">
+
+  <style>
+    @font-face {
+      font-family: 'Goldman Sans';
+      src: local('Goldman Sans'),
+           url('https://fonts.cdnfonts.com/s/40078/GoldmanSans_Rg.woff') format('woff');
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    @font-face {
+      font-family: 'Basis';
+      src: local('Basis Grotesque Pro'), local('BasisGrotesquePro-Regular'),
+           url('') format('');
+    }
+
+    body {
+      font-size: 16px;
+      line-height: 22px;
+      color: #22263F;
+      font-family: 'BasisGrotesque', 'Goldman Sans', sans-serif;
+    }
+
+    h2 {
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    .navbar-custom {
+      background-color: #21263F;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .navbar-custom img {
+      width: 300px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .hero {
+      background-image: url('https://images.cvent.com/35272c27c83748c1860d466d8be87072/pix/4ca033777e4b4ab38c9b3bb5e5bd127c!_!b71ae286fde6637f6b0ba5a264990ac9.png');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 3rem 2rem 2.5rem 2rem;
+      text-align: left;
+    }
+
+    .hero .dateline {
+      font-size: 1.25rem;
+      opacity: 0.9;
+      margin-bottom: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero .subheading {
+      font-size: 34px;
+      line-height: 38px;
+      opacity: 0.9;
+    }
+
+    .cta-button {
+      background-color: #BFD8F5;
+      color: #22263F;
+      font-weight: bold;
+      border-radius: 5px;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      transition: all 0.3s ease;
+      font-family: 'BasisGrotesque', 'Goldman Sans', sans-serif;
+    }
+
+    .cta-button:hover {
+      background-color: white;
+      color: #22263F;
+    }
+
+    .cta-link {
+      opacity: 0.9;
+      color: white;
+      text-decoration: underline;
+      font-weight: normal;
+      font-family: 'BasisGrotesque', 'Goldman Sans', sans-serif;
+    }
+
+    .section {
+      padding: 3rem 1rem;
+    }
+
+    .footer {
+      background-color: #343a40;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .footer-nav {
+      background-color: #21263F;
+      color: white;
+      padding: 2rem 1rem;
+    }
+
+    .footer-nav a {
+      color: white;
+      text-decoration: underline;
+      font-weight: normal;
+    }
+
+    .attestation-heading {
+      font-size: 15px;
+      line-height: 18px;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .attestation-note {
+      margin-top: 0;
+    }
+
+    ul.custom-list {
+      padding-left: 1.25rem;
+      margin-bottom: 0;
+    }
+
+    ul.custom-list li {
+      margin-bottom: 0.25rem;
+    }
+
+    ul.custom-list li ul {
+      padding-left: 1.25rem;
+    }
+
+    .contact-link {
+      color: #22263F;
+      text-decoration: underline;
+      font-weight: normal;
+    }
+
+    .dark-box {
+      background-color: #21263F;
+      color: #22263F;
+      width: 100%;
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .dark-box {
+  background-color: #F7FBFF; /* updated from #21263F */
+  color: #22263F;
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+    @media (max-width: 767px) {
+      .navbar-custom img {
+        width: 200px;
+        height: auto;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero .subheading {
+        font-size: 26px;
+        line-height: 30px;
+      }
+
+      .dark-box {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar-custom">
+    <a href="#">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Goldman_Sachs.svg/512px-Goldman_Sachs.svg.png" alt="Goldman Sachs Logo">
+    </a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <p class="dateline">Date</p>
+      <h1>Headline</h1>
+      <p class="subheading">Subheader</p>
+      <!-- <a href="#" class="btn cta-button mt-3">Register Now</a> -->
+      <p class="mt-3">
+        <a href="#" class="cta-link">Already registered?</a>
+      </p>
+    </div>
+  </header>
+
+  <!-- Contact Information Section -->
+  <section class="section text-center container">
+    <h2>Contact Information</h2>
+    <p class="mt-2">Fill out the information below, then click Next to continue.</p>
+    <p><a href="#" class="contact-link">Already registered?</a></p>
+  </section>
+
+  <div class="dark-box">
+    <p>This is a centered light blue content box that adapts to screen size and uses the same font color as the rest of the body.</p>
+  </div>
+  <!-- Attestation Section -->
+  <section class="section container text-start">
+    <h3 class="attestation-heading">Attestation</h3>
+    <p class="attestation-note">Please advise if you are any of the following:</p>
+  </section>
+
+  <!-- Public Official Section -->
+  <section class="section container text-start">
+    <h3 class="attestation-heading">Public Official</h3>
+    <ul class="custom-list">
+      <li>Please advise if you are any of the following:
+        <ul>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Goldman Sachs. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
