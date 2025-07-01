@@ -1,346 +1,805 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>OneGS Event Template</title>
+        <title>Goldman Sachs</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="icon" type="image/svg+xml" href="https://cdn.gs.com/images/goldman-sachs/v1/gs-favicon.svg">
         <link rel="alternate icon" href="https://cdn.gs.com/images/goldman-sachs/v1/gs-favicon.ico">
         <link rel="mask-icon" href="https://cdn.gs.com/images/goldman-sachs/v1/gs-favicon.ico">
         <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.gs.com/images/goldman-sachs/v1/gs-favicon-180.png">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.11.1/sass.sync.min.js"></script>
         <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-    }
+          @font-face{font-family:GS Sans;src:url("https://cdn.gs.com/fonts/gs-sans/v1/gs-sans-variable.woff2") format("woff2");font-style:normal;}
+          @font-face{font-family:GS Sans;src:url("https://cdn.gs.com/fonts/gs-sans/v1/gs-sans-variable-italic.woff2") format("woff2");font-style:italic;}
+          @font-face{font-family:GS Sans Condensed;src:url("https://cdn.gs.com/fonts/gs-sans/v1/gs-sans-condensed-variable.woff2") format("woff2");font-style:normal;}
+          @font-face{font-family:GS Sans Condensed;src:url("https://cdn.gs.com/fonts/gs-sans/v1/gs-sans-condensed-variable-italic.woff2 ");font-style:italic;}
+          @font-face{font-family:GS Serif;src:url("https://cdn.gs.com/fonts/gs-serif/v1/gs-serif-variable.woff2") format("woff2");font-style:normal;}
+          @font-face{font-family:GS Serif;src:url("https://cdn.gs.com/fonts/gs-serif/v1/gs-serif-variable-italic.woff2") format("woff2");font-style:italic;}
+          body {
+            font-weight: 400;
+            font-family: "GS Sans",Helvetica,Arial,sans-serif;
+            color: rgb(0, 0, 0,.95);
+          }
+          .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl
+          .jumbotron, .nav, .main {
+            margin: 0;
+          }
+          div.col-lg-1 {
+            padding: 0;
+          }
+          h1 {
+            font-family: "GS Serif",Times,"Times New Roman",serif;
+            font-size: 80px;
+            line-height: 80px;
+            font-weight: 300;
+            }
+          h2 {
+            font-family: "GS Sans Condensed","Trebuchet MS",sans-serif;
+            font-size: 40px;
+            line-height: 60px;
+          }
+          h3 {
+            font-size: 16px;
+            line-height: 20px;
+            text-transform: uppercase;
+          }
+          h4 {
+            font-family: "GS Sans Condensed","Trebuchet MS",sans-serif;
+            font-size: 30px;
+            line-height: 30px;
+          }
+          p {
+            font-size: 20px;
+            line-height: 30px;
+          }
+          .detail_link {
+            background-color: #F7F7FA;
+            font-size: 18px;
+            line-height: 22px;
+            font-weight: 400;
+            padding: 16px 0px 0px 10px;
+            
+          }
+          .active {
+            background-color: none;
+          }
+          .nav-link {
+            font-size: 16px;
+            line-height: 20px;
+            color: rgb(0, 0, 0,.8);
+            vertical-align: middle;
+          }
+          div.container-fluid.nav, .jumbotron {
+            margin: 0px 40px;
+            padding: 0px;;
+          }
+          .btn {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            border-radius: 2px;
+          }
+          .btn-light {
+            background-color: rgb(255, 255, 255,.95);
+            color: rgb(0, 0, 0,.95);
+            --bs-btn-border-color: #f8f9fa;
+          }          
+          .btn-dark {
+            background-color: rgb(0, 0, 0,.95);
+            --bs-btn-border-color: rgb(0, 0, 0,.95);
+            color: rgb(255, 255, 255,.95);
+          }
+          .card {
+            border: none;
 
-    .navbar-custom {
-      background-color: #7297C5;
-    }
+          }
+          .card-text {
+            padding-bottom: 0;
+          }
+          div.card-body {
+            padding-left: 0;
+            padding-right: 10px;
+            background-color: #F7F7FA;
+          }
+          div.col-lg-3 {
+            padding-left: 0;
+            padding-right: 30px;
+          }
+          div.col-lg-3:last-child {
+            padding-right: 0px;
+          }
+          nav {
+            background-color: #7297C5;
+          }   
+          .hero {
+            margin: 0;
+            color: rgb(255, 255, 255,.95);
+            padding-top: 16%;
+          } 
+          div.jumbotron.bg-image.container-fluid {
+            padding: 0;
+            margin: 0;
+          }
+          .row>* {
+            padding: 0px;
+          }
+          .table tr {
+            border-top: solid 1px #00000057;
+          }
+          .table>:not(caption)>*>* {
+    border-bottom-width: 0;
+    box-shadow: none;
+}
+          .table {
+            margin-bottom: 0;
+          }
+          .list-group {
+            border-radius: 0;
+          }
+          .bg-image {
+            background-image: url("https://fastly.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68");
+            width: 100%;
+            background-size: cover;
+          }
+          .hero {
+            margin: 0px 40px;
+          }
+          .hero > h1, h2, p, button{
+            vertical-align: bottom;
+          }
+          .card_link {
+            color: rgb(0, 0, 0,.95);
+          }
+          .table tr td {
+            padding: 16px 0px;
+            font-weight: 500;
+            line-height: 30px;
+          }
+          .list-group-item {
+            border: none;
+          }
+          footer {
+            background-color: #2A2927;
+          }
+          @media only screen and (max-width: 1024px){
+            .hide {
+              display: none;
+            }
+          }
+          @media only screen and (max-width: 768px){
+            .hero {
+              padding-top: 30%;
+            } 
+          }
+          @media only screen and (max-width: 600px){
+            .hero {
+              padding-top: 30%;
+            } 
 
-    .navbar-custom .navbar-nav {
-      align-items: center;
-    }
+          }
 
-    .navbar-custom .navbar-nav .nav-link {
-      color: #000;
-      padding: 0 10px;
-    }
+/*
+Light blue.gray F7F7FA
 
-    .navbar-custom .btn {
-      background-color: #000;
-      color: #fff;
-      border-radius: 1px;
-      margin-left: 20px;
-    }
-
-    @media (max-width: 768px) {
-      .navbar-custom .nav-link {
-        display: none;
-      }
-    }
-
-    .hero {
-      background: url('https://fastly.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68') no-repeat center center;
-      background-size: cover;
-      height: 500px;
-      position: relative;
-      color: white;
-    }
-
-    .hero {
-      background: url('https://fastly.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68') no-repeat center center;
-      background-size: cover;
-      height: 500px;
-      position: relative;
-      color: white;
-    }
-
-    .hero-content {
-      position: absolute;
-      bottom: 40px;
-      left: 40px;
-      color: white;
-    }
-
-    .hero .btn-cta {
-      background-color: white;
-      color: black;
-      margin-top: 20px;
-      border-radius: 1px;
-    }
-
-    .two-column-section {
-      padding: 60px 40px;
-    }
-
-    .tiles-container {
-      display: flex;
-      gap: 16px;
-    }
-
-    .tile {
-      background-color: #F0EBE6;
-      padding: 48px 36px 40px 36px;
-      border-radius: 1px;
-      text-align: left;
-      flex: 1;
-    }
-
-    .full-width-image-section {
-      padding: 0 40px;
-    }
-
-    .full-width-image-section img {
-      width: 100%;
-      height: 450px;
-      object-fit: cover;
-      border-radius: 0;
-    }
-
-    .speaker-section {
-      background-color: #F7F7FA;
-      padding: 60px 40px;
-      display: none;
-    }
-
-    .speaker-section h1,
-    .speaker-section h2 {
-      color: black;
-      text-align: left;
-    }
-
-    .speaker-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 32px;
-      margin-top: 40px;
-      justify-content: center;
-    }
-
-    .speaker-tile {
-      background-color: transparent;
-      border-radius: 1px;
-      padding: 0;
-      text-align: left;
-      width: 50px;
-      height: 50px;
-    }
-
-    .speaker-tile img {
-      width: 50px;
-      height: 50px;
-      object-fit: cover;
-      border-radius: 1px;
-      margin-bottom: 10px;
-    }
-
-    .day1-section {
-      padding: 60px 40px 0px;
-    }
-
-    .day1-section h2,
-    .day1-section h1 {
-      text-align: left;
-    }
-
-    .day1-content {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      align-items: stretch;
-    }
-
-    .day1-square {
-      width: 200px;
-      background-color: #F0EBE6;
-      flex-shrink: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-
-    .day1-square h2,
-    .day1-square h1 {
-      color: black;
-      margin: 4px 0;
-    }
-
-    .day1-table {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .day1-table p {
-      border-top: 1px solid #ccc;
-      padding: 15px 0;
-      margin: 0;
-    }
+Warm gray #F0EBE6
+ */
         </style>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img
-                        src="https://fastly.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68"
-                        alt="Logo"
-                        width="10"
-                        height="19"
-                    >
-                </a>
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <!-- NAV START -->
+        <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+            <div class="container-fluid nav">
+                <div class="collapse navbar-collapse" id="navbarColor02">
+                    <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
+                            <a class="nav-link active" href="#">
+                                <span style="display: inline-flex;">
+                                    <svg
+                                        width="63"
+                                        height="26"
+                                        viewBox="0 0 63 26"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <title>GoldmanSachs Logo</title>
+                                        <path d="M14 2.55696C11.6203 2.55696 10.1519 4.35443 10.1519 7.41772C10.1519 10.4557 11.6203 12.2785 14 12.2785C16.3797 12.2785 17.8481 10.481 17.8481 7.41772C17.8481 4.35443 16.4051 2.55696 14 2.55696ZM14 11.7215C13.0886 11.7215 12.8101 10.7342 12.8101 7.39241C12.8101 4.05063 13.0886 3.06329 14 3.06329C14.9114 3.06329 15.1899 4.07595 15.1899 7.41772C15.1899 10.7342 14.9114 11.7215 14 11.7215ZM31.5443 16.3038C30.5316 16.3038 29.7975 16.6835 29.3671 17.3418V14H26.8101V20.2025C26.8101 23.5696 24.8861 25.1646 23.1392 25.1646C21.8481 25.1646 21.3165 24.2785 21.3165 21.2405C21.3165 18.2025 21.6456 16.8354 22.6835 16.8354C23.3671 16.8354 23.9494 17.4937 24.5316 19.0127H25.1646V16.7595C24.4051 16.4557 23.4684 16.3038 22.7342 16.3038C20.1266 16.3038 18.6582 18.1772 18.6582 21.2405C18.6582 24.2785 20.1266 26 22.6076 26C24.6582 26 26.1266 24.9114 26.8101 23.0633V25.7722H29.3671V18.8861C29.3671 17.8228 29.9494 17.2911 30.557 17.2911C31.1392 17.2911 31.3418 17.7722 31.3418 18.5063V25.7975H33.8987V18.9873C33.8987 17.0886 32.962 16.3038 31.5443 16.3038ZM19.4177 0.253165V12.0506H21.9747V0.253165H19.4177ZM28.6329 0.253165V3.46835C28.4051 2.91139 27.8481 2.55696 26.962 2.55696C24.962 2.55696 23.6203 4.35443 23.6203 7.36709C23.6203 10.4557 24.8101 12.2532 26.8608 12.2532C27.8228 12.2532 28.481 11.7975 28.7848 10.8608V12.0253H31.1646V0.253165H28.6329ZM27.3671 11.519C26.557 11.519 26.2785 10.7089 26.2785 7.34177C26.2785 4.17722 26.557 3.24051 27.4177 3.24051C28.3544 3.24051 28.6835 4.35443 28.6835 7.34177C28.6835 10.3544 28.2532 11.519 27.3671 11.519ZM42.2025 2.55696C41.0633 2.55696 40.2278 3.16456 39.8734 4C39.519 3.03797 38.8101 2.55696 37.7975 2.55696C36.7089 2.55696 35.924 3.03797 35.5443 3.82278V2.78481H33.1646V12.0506H35.6962V5.13924C35.6962 4.07595 36.2025 3.5443 36.8354 3.5443C37.3671 3.5443 37.5949 3.97468 37.5949 4.70886V12.0506H40.1519V5.13924C40.1519 4.07595 40.6582 3.5443 41.2911 3.5443C41.8228 3.5443 42.0506 3.97468 42.0506 4.70886V12.0506H44.6076V5.24051C44.6076 3.34177 43.6456 2.55696 42.2025 2.55696ZM40.1013 20.3544L38.6329 19.4684C37.6456 18.8861 37.2911 18.5316 37.2911 17.9241C37.2911 17.2405 37.7722 16.8101 38.5823 16.8101C39.5443 16.8101 40.2532 17.443 40.6835 18.9873H41.3165V16.6076C40.5063 16.4304 39.5949 16.2785 38.7848 16.2785C36.7342 16.2785 35.4937 17.2911 35.4937 18.9367C35.4937 20.076 36.1266 20.8608 37.4177 21.6456L38.6329 22.3797C39.6456 22.9873 40 23.4177 40 24.1013C40 24.9873 39.443 25.443 38.481 25.443C37.2911 25.443 36.6076 24.6835 36.1519 23.0127H35.519V25.6203C36.4557 25.8734 37.443 25.9747 38.2532 25.9747C40.5823 25.9747 41.9241 24.8861 41.9241 23.0633C41.8987 21.8228 41.2911 21.0633 40.1013 20.3544ZM49.8481 2.55696C48.8861 2.55696 47.7468 2.73418 46.6835 3.06329V5.24051H47.3165C47.8481 3.87342 48.557 3.11392 49.5696 3.11392C50.2025 3.11392 50.4557 3.41772 50.4557 4.12658V5.31646C50.4557 5.89873 50.3038 6.07595 49.6456 6.3038L48.962 6.53165C46.9367 7.21519 46.0253 8.10127 46.0253 9.6962C46.0253 11.3924 47.038 12.2785 48.5063 12.2785C49.5443 12.2785 50.4304 11.8228 50.7089 10.9367V12.0506H53.038V5.31646C53.0127 3.49367 51.924 2.55696 49.8481 2.55696ZM50.4557 9.56962C50.4557 10.7848 50.0506 11.3418 49.4177 11.3418C48.8101 11.3418 48.6076 10.8608 48.6076 9.62025V9.36709C48.6076 7.92405 48.9114 7.34177 49.7468 6.91139L50.4557 6.55696V9.56962ZM59.6709 2.55696C58.557 2.55696 57.7468 3.03797 57.3418 3.82278V2.78481H54.9367V12.0506H57.4937V5.11392C57.4937 4.05063 58.076 3.51899 58.6835 3.51899C59.2658 3.51899 59.4684 4 59.4684 4.73418V12.0253H62.0253V5.24051C62.0253 3.34177 61.0886 2.55696 59.6709 2.55696ZM9.06329 21.8228C9.06329 24.2025 7.34177 25.7975 4.58228 25.7975H0.531646V21.5696H1.13924C1.6962 24.0759 2.73418 25.1899 4.48101 25.1899C5.89873 25.1899 6.65823 24.4304 6.65823 23.1899C6.65823 21.8734 5.8481 21.2658 4.65823 20.5823L2.86076 19.519C1.34177 18.6329 0.481013 17.5443 0.481013 16.0253C0.481013 14.3291 1.46835 13.2405 3.06329 12.7848C0.810127 12.1772 0 10.1266 0 6.48101C0 2.32911 1.72152 0 5.24051 0H8.50633V3.49367H7.87342C7.11392 1.26582 6.4557 0.582278 5.26582 0.582278C3.51899 0.582278 3.03797 2.4557 3.03797 6.58228C3.03797 11.3418 3.46835 12.4051 4.75949 12.4051C5.74684 12.4051 6.22785 11.7722 6.22785 10.2785V8.4557C6.22785 7.34177 5.87342 6.93671 4.70886 6.75949V6.17722H8.6076V16.1266H8.02532C7.13924 13.6203 6 13.0633 4.73418 13.0633C3.49367 13.0633 2.73418 13.6456 2.73418 14.7848C2.73418 15.8481 3.36709 16.3544 4.55696 17.0633L6.50633 18.2278C8.05063 19.1899 9.06329 20.0759 9.06329 21.8228ZM13.9747 16.3038C13.0127 16.3038 11.8734 16.481 10.8101 16.8101V18.9873H11.443C11.9747 17.6203 12.6835 16.8608 13.6962 16.8608C14.3291 16.8608 14.5823 17.1646 14.5823 17.8734V19.038C14.5823 19.6203 14.4304 19.7975 13.7722 20.0253L13.0886 20.2532C11.0633 20.9367 10.1519 21.8228 10.1519 23.4177C10.1519 25.1139 11.1646 26 12.6329 26C13.6709 26 14.557 25.5443 14.8354 24.6582V25.7722H17.1392V19.0886C17.1392 17.2405 16.0253 16.3038 13.9747 16.3038ZM14.5823 23.3165C14.5823 24.5316 14.1772 25.0886 13.5443 25.0886C12.9367 25.0886 12.7342 24.6076 12.7342 23.3671V23.1139C12.7342 21.6709 13.038 21.0886 13.8734 20.6582L14.5823 20.3038V23.3165Z" fill="black" fill-opacity="0.95"></path>
+                                    </svg>
+                                </span>
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link" href="#">Speakers</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Extra</a>
+                            <a class="nav-link" href="#">Agenda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Additional Details</a>
                         </li>
                     </ul>
-                    <button class="btn">Register For This Event</button>
+                    <button class="btn btn-secondary my-2 my-sm-0 btn-dark" type="submit">Register for this Event</button>
                 </div>
             </div>
         </nav>
-        <section class="hero d-flex align-items-end">
-            <a href="#">
-                <div class="hero-content">
-                    <h2>Subheading Here</h2>
-                    <h1>Main Heading Here</h1>
-                    <p>Descriptive body text goes here.</p>
-                    <button class="btn btn-cta">Register For This Event</button>
-                </div>
-            </a>
-        </section>
-        <section class="two-column-section container-fluid">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>Section Title</h2>
-                    <h1>Main Section Heading</h1>
-                    <p>This is the body content for the section. It describes something important in detail.</p>
-                </div>
-                <div class="col-md-6">
-                    <div class="tiles-container">
-                        <div class="tile">
-                            <h2>Tile H2</h2>
-                            <h4>Tile H4</h4>
-                            <p>Tile paragraph content goes here explaining details clearly.</p>
-                            <h5>Tile H5</h5>
-                        </div>
-                        <div class="tile">
-                            <h2>Tile H2</h2>
-                            <h4>Tile H4</h4>
-                            <p>Tile paragraph content goes here explaining details clearly.</p>
-                            <h5>Tile H5</h5>
+        <!-- NAV END -->
+         <!-- HERO START -->
+        <div class="jumbotron bg-image container-fluid" style="background-image: url('https://picsum.photos/id/1/200/300');height: 500px; align-content: baseline;">
+            <div class="hero">
+                <h3>Event
+                </h1>
+                <h1>Hello, world!</h1>
+                <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                <button class="btn btn-secondary my-2 my-sm-0 btn-light" type="submit" style="vertical-align: bottom;">Register for this Event</button>
+            </div>
+        </div>
+        <!-- HERO END -->
+         <!-- 2 COL EVENT INFO START-->
+         <div class="row" style="margin: 40px;">
+          <div class="col-lg-6">
+            <h3>hello</h3> 
+            <h2>Text</h2>
+             <p>more text</p>
+          </div>
+          <div class="col-lg-3">
+            <div class="bs-component">
+              <div class="list-group" style="background-color: #F0EBE6; padding: 48px 38px;">
+                <h3>hello</h3> 
+                <h4>Text</h4>
+                 <p style="padding-top:10px;">more text<br>text</p>
+                 <p style="padding-top:16px;"><a href="" class="card_link">more text</a></p>
+              </div>
+          </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="bs-component">
+              <div class="list-group" style="background-color: #F0EBE6; padding: 48px 38px;">
+                <h3>hello</h3> 
+                <h4>Text</h4>
+                 <p style="padding-top:10px;">more text<br>text</p>
+                 <p style="padding-top:16px;"><a href="" class="card_link">more text</a></p>
+              </div>
+          </div>
+          </div>
+      </div>
+          <!-- 2 COL EVENT INFO END -->
+           <!-- FULL WIDTH COL START-->
+        <div style="margin: 40px;">
+            <div class="jumbotron bg-image container-fluid" style="background-image: url('https://picsum.photos/id/1/200/300');height: 200px; align-content: baseline;">
+                <div class="hero"></div>
+            </div>
+        </div>
+        <!-- FULL WIDTH COL END -->
+                 <!-- SPEAKER SECTION START -->
+                  <div style="background-color: #F7F7FA; padding: 20px 0;"> 
+                    <div class="row" style="margin: 40px 40px 0;">
+                      <h3>title</h3>
+                      <h2>title</h2>
+              
+                    </div>
+        <div class="row" style="margin: 0 40px 0px;">
+            <div class="col-lg-3">
+                <div class="bs-component">
+                    <div class="card mb-3">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="d-block user-select-none"
+                            width="100%"
+                            height="200"
+                            aria-label="Placeholder: Image cap"
+                            focusable="false"
+                            role="img"
+                            preserveAspectRatio="xMidYMid slice"
+                            viewBox="0 0 318 180"
+                            style="font-size:1.125rem;text-anchor:middle"
+                        >
+                            <rect width="100%" height="100%" fill="#868e96"></rect>
+                            <text
+                                x="50%"
+                                y="50%"
+                                fill="#dee2e6"
+                                dy=".3em"
+                            >Image cap</text>
+                        </svg>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <b>Name</b>
+                            </p>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="full-width-image-section">
-            <img src="https://fastly.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68" alt="Full Width Image">
-        </section>
-        <section class="day1-section">
-            <h2>Day 1 Schedule</h2>
-            <h1>What to Expect</h1>
-            <div class="day1-content">
-                <div class="day1-square">
-                    <h2>Tile H2</h2>
-                    <h1>Tile H1</h1>
-                </div>
-                <div class="day1-table">
-                    <p>04:00pm   |   Arrival and Check In</p>
-                    <p>05:00pm   |   Welcome Ceremony</p>
-                    <p>06:00pm   |   Keynote Speaker</p>
-                </div>
-            </div>
-        </section>
-
-
-
-        <section class="day1-section">
-            <div class="day1-content">
-                <div class="day1-square">
-                    <h2>Tile H2</h2>
-                    <h1>Tile H1</h1>
-                </div>
-                <div class="day1-table">
-                    <p>04:00pm   |   Arrival and Check In</p>
-                    <p>05:00pm   |   Welcome Ceremony</p>
-                    <p>06:00pm   |   Keynote Speaker</p>
+            <div class="col-lg-3">
+                <div class="bs-component">
+                    <div class="card mb-3">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="d-block user-select-none"
+                            width="100%"
+                            height="200"
+                            aria-label="Placeholder: Image cap"
+                            focusable="false"
+                            role="img"
+                            preserveAspectRatio="xMidYMid slice"
+                            viewBox="0 0 318 180"
+                            style="font-size:1.125rem;text-anchor:middle"
+                        >
+                            <rect width="100%" height="100%" fill="#868e96"></rect>
+                            <text
+                                x="50%"
+                                y="50%"
+                                fill="#dee2e6"
+                                dy=".3em"
+                            >Image cap</text>
+                        </svg>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <b>Name</b>
+                            </p>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-        </section>
-     <div><br><br><br></div>
-        <section class="hero align-items-end" style="padding: 0px;height: 250px;background: none; background-color: #7297C5; ">
+            <div class="col-lg-3">
+                <div class="bs-component">
+                    <div class="card mb-3">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="d-block user-select-none"
+                            width="100%"
+                            height="200"
+                            aria-label="Placeholder: Image cap"
+                            focusable="false"
+                            role="img"
+                            preserveAspectRatio="xMidYMid slice"
+                            viewBox="0 0 318 180"
+                            style="font-size:1.125rem;text-anchor:middle"
+                        >
+                            <rect width="100%" height="100%" fill="#868e96"></rect>
+                            <text
+                                x="50%"
+                                y="50%"
+                                fill="#dee2e6"
+                                dy=".3em"
+                            >Image cap</text>
+                        </svg>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <b>Name</b>
+                            </p>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="bs-component">
+                    <div class="card mb-3">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="d-block user-select-none"
+                            width="100%"
+                            height="200"
+                            aria-label="Placeholder: Image cap"
+                            focusable="false"
+                            role="img"
+                            preserveAspectRatio="xMidYMid slice"
+                            viewBox="0 0 318 180"
+                            style="font-size:1.125rem;text-anchor:middle"
+                        >
+                            <rect width="100%" height="100%" fill="#868e96"></rect>
+                            <text
+                                x="50%"
+                                y="50%"
+                                fill="#dee2e6"
+                                dy=".3em"
+                            >Image cap</text>
+                        </svg>
+                        <div class="card-body">
+                            <p class="card-text">
+                                <b>Name</b>
+                            </p>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin: 0 40px 0px;">
+          <div class="col-lg-3">
+              <div class="bs-component">
+                  <div class="card mb-3">
+                      <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="d-block user-select-none"
+                          width="100%"
+                          height="200"
+                          aria-label="Placeholder: Image cap"
+                          focusable="false"
+                          role="img"
+                          preserveAspectRatio="xMidYMid slice"
+                          viewBox="0 0 318 180"
+                          style="font-size:1.125rem;text-anchor:middle"
+                      >
+                          <rect width="100%" height="100%" fill="#868e96"></rect>
+                          <text
+                              x="50%"
+                              y="50%"
+                              fill="#dee2e6"
+                              dy=".3em"
+                          >Image cap</text>
+                      </svg>
+                      <div class="card-body">
+                          <p class="card-text">
+                              <b>Name</b>
+                          </p>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-3">
+              <div class="bs-component">
+                  <div class="card mb-3">
+                      <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="d-block user-select-none"
+                          width="100%"
+                          height="200"
+                          aria-label="Placeholder: Image cap"
+                          focusable="false"
+                          role="img"
+                          preserveAspectRatio="xMidYMid slice"
+                          viewBox="0 0 318 180"
+                          style="font-size:1.125rem;text-anchor:middle"
+                      >
+                          <rect width="100%" height="100%" fill="#868e96"></rect>
+                          <text
+                              x="50%"
+                              y="50%"
+                              fill="#dee2e6"
+                              dy=".3em"
+                          >Image cap</text>
+                      </svg>
+                      <div class="card-body">
+                          <p class="card-text">
+                              <b>Name</b>
+                          </p>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-3">
+              <div class="bs-component">
+                  <div class="card mb-3">
+                      <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="d-block user-select-none"
+                          width="100%"
+                          height="200"
+                          aria-label="Placeholder: Image cap"
+                          focusable="false"
+                          role="img"
+                          preserveAspectRatio="xMidYMid slice"
+                          viewBox="0 0 318 180"
+                          style="font-size:1.125rem;text-anchor:middle"
+                      >
+                          <rect width="100%" height="100%" fill="#868e96"></rect>
+                          <text
+                              x="50%"
+                              y="50%"
+                              fill="#dee2e6"
+                              dy=".3em"
+                          >Image cap</text>
+                      </svg>
+                      <div class="card-body">
+                          <p class="card-text">
+                              <b>Name</b>
+                          </p>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-3">
+              <div class="bs-component">
+                  <div class="card mb-3">
+                      <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="d-block user-select-none"
+                          width="100%"
+                          height="200"
+                          aria-label="Placeholder: Image cap"
+                          focusable="false"
+                          role="img"
+                          preserveAspectRatio="xMidYMid slice"
+                          viewBox="0 0 318 180"
+                          style="font-size:1.125rem;text-anchor:middle"
+                      >
+                          <rect width="100%" height="100%" fill="#868e96"></rect>
+                          <text
+                              x="50%"
+                              y="50%"
+                              fill="#dee2e6"
+                              dy=".3em"
+                          >Image cap</text>
+                      </svg>
+                      <div class="card-body">
+                          <p class="card-text">
+                              <b>Name</b>
+                          </p>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+      <div class="row" style="margin: 0 40px 40px;">
+        <div class="col-lg-3">
+            <div class="bs-component">
+                <div class="card mb-3">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="d-block user-select-none"
+                        width="100%"
+                        height="200"
+                        aria-label="Placeholder: Image cap"
+                        focusable="false"
+                        role="img"
+                        preserveAspectRatio="xMidYMid slice"
+                        viewBox="0 0 318 180"
+                        style="font-size:1.125rem;text-anchor:middle"
+                    >
+                        <rect width="100%" height="100%" fill="#868e96"></rect>
+                        <text
+                            x="50%"
+                            y="50%"
+                            fill="#dee2e6"
+                            dy=".3em"
+                        >Image cap</text>
+                    </svg>
+                    <div class="card-body">
+                        <p class="card-text">
+                            <b>Name</b>
+                        </p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="bs-component">
+                <div class="card mb-3">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="d-block user-select-none"
+                        width="100%"
+                        height="200"
+                        aria-label="Placeholder: Image cap"
+                        focusable="false"
+                        role="img"
+                        preserveAspectRatio="xMidYMid slice"
+                        viewBox="0 0 318 180"
+                        style="font-size:1.125rem;text-anchor:middle"
+                    >
+                        <rect width="100%" height="100%" fill="#868e96"></rect>
+                        <text
+                            x="50%"
+                            y="50%"
+                            fill="#dee2e6"
+                            dy=".3em"
+                        >Image cap</text>
+                    </svg>
+                    <div class="card-body">
+                        <p class="card-text">
+                            <b>Name</b>
+                        </p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3" class="hide">
+     
+      </div>
+      <div class="col-lg-3" class="hide">
+     
+      </div>
         
- 
+    </div>
 
-<div class=" text-center">
-  <div class="row align-items-start">
-    <div class="col">
-      
-                    <h1 style="text-align: left;">Main Heading Here</h1>
-                    <a href="#"><button align="left" class="btn" style="background-color: #000; color: #fff;text-align: left;">Register For This Event</button>     </a>
-    </div>
-    <div class="col"></div>
-    <div class="col"></div>
-    <div class="col" align="right">
-      <img style="float: right; width: 100px; height:250px;" src="https://fastly.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68">
-    </div>
-  </div>
+      </div>
+        <!-- SPEAKER SECTION END -->
+        <!-- TABLE SECTION START -->
+          <div class="row" style="margin: 40px;">
+            <h3>title</h3>
+            <h2>title</h2>
+            <div class="row" style="--bs-gutter-x: 0;">
+              <div class="col-lg-2" align="center" style="background-color: #F0EBE6; padding-top: 2.5em;">
+<h3>Day 1 agenda</h3>
+<h2>April 1st</h2>
+              </div>
+              <div class="col-lg-10" style="padding-left: 80px; padding-right: 80px;">
+                  <div class="bs-component">
+                      <table class="table table-hover">
+                        <tr>
+                          <td>Column content</td>
+                        </tr>
+                        <tr>
+                          <td>Column content</td>
+                        </tr>
+                        <tr>
+                          <td>Column content</td>
+                        </tr>
+                      </table>
+                  </div>
+                  <!-- /example -->
+              </div>
+          </div>
+          </div>
+                 <!-- TABLE SECTION END -->
+                          <!-- DETAILS SECTION START -->
+                         
+                           <div style="margin-left: 40px;">            
+                            <h3>title</h3>
+                            <h2>title</h2>
+                          </div>
+
+<div style="margin: 0 40px 40px;">
+                           <div style="background-color: #F7F7FA; padding-top: 40px; padding-bottom: 40px;">
+                            <div style="margin-left: 50px;">       
+        <div class="row" style="">
+          <div class="col-lg-3">
+            <div class="list-group" id="list-tab" role="tablist" style="border-left: solid 1px #000000f2;">
+              <a class="list-group-item list-group-item-action detail_link" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
+              </div>
+              <div class="list-group" id="list-tab" role="tablist" style="border-left: solid 1px #000000f2;">
+              <a class="list-group-item list-group-item-action detail_link" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a>
+            </div>
+            <div class="list-group" id="list-tab" role="tablist" style="border-left: solid 1px #000000f2;">
+              <a class="list-group-item list-group-item-action detail_link" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Messages</a>
+            </div>
+            <div class="list-group" id="list-tab" role="tablist" style="border-left: solid 1px #000000f2; padding-bottom: 16px;;">
+              <a class="list-group-item list-group-item-action detail_link" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
+            </div>
+          </div>
+          <div class="col-lg-9" style="--bs-gutter-x: 0; padding-top:0px">
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                <p style="font-size: 26px; line-height: 30px;"><b>Lorem Ipsum</b></p>
+                <p>Lorem Ipsum</p>
+                <p>Lorem Ipsum</p>
+              </div>
+              <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">more</div>
+              <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">show this</div>
+              <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">and this</div>
+            </div>
+          </div>
+        </div>
+</div>
+
+        </div>
+
+      </div>
+                 <!-- TABLE DETAILS END -->
+                          <!-- CTA SECTION START -->
+
+
+        <div class="jumbotron container-fluid" style="background-color: #7297c5;height: 300px;--bs-gutter-x: 0; margin: 0;">
+
+          <div class="col-lg-10">
+          <div class="" style="padding: 40px;">
+              <h2>Hello, world!</h2>
+              <button class="btn btn-secondary my-2 my-sm-0 btn-dark" type="submit" style="vertical-align: bottom;">Register for this Event</button>
+          </div>
 </div>
 
 
-      </section>
-      <section class="two-column-section container-fluid">
-        <div class="row">
-            <div class="col-md-6">
-                <p>Disclaimer lorem ipsum</p><p>Disclaimer lorem ipsum</p><p>Disclaimer lorem ipsum</p>
-            </div>
-        
-            </div>
-        </div>
-    </section>
-    <section class="two-column-section container-fluid" style="background-color: blue;">
-      <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-              <img
-                  src="https://fastly.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68"
-                  alt="Logo"
-                  width="10"
-                  height="19"
-              >
-          </a>
-          <div class="collapse navbar-collapse" style="color: red;">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">Home</a>
+      </div>
+      <!-- CTA SECTION END -->
+            <!-- DISLCAIMER START -->
+            <div class="jumbotron container-fluid" style="align-content: baseline; margin: 40px;">
+              <div class="">
+       
+                  <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                  <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                  <p style="padding-bottom: 0px;">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+              </div>
+          </div>
+          <!-- DISLCAIMER END -->
+   <!-- FOOTER 1 START -->
+   <nav class="navbar navbar-expand-lg" data-bs-theme="dark" style="background-color: black;">
+    <div class="container-fluid nav">
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">
+                        <span style="display: inline-flex;">
+                            <svg
+                                width="63"
+                                height="26"
+                                viewBox="0 0 63 26"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <title>GoldmanSachs Logo</title>
+                                <path d="M14 2.55696C11.6203 2.55696 10.1519 4.35443 10.1519 7.41772C10.1519 10.4557 11.6203 12.2785 14 12.2785C16.3797 12.2785 17.8481 10.481 17.8481 7.41772C17.8481 4.35443 16.4051 2.55696 14 2.55696ZM14 11.7215C13.0886 11.7215 12.8101 10.7342 12.8101 7.39241C12.8101 4.05063 13.0886 3.06329 14 3.06329C14.9114 3.06329 15.1899 4.07595 15.1899 7.41772C15.1899 10.7342 14.9114 11.7215 14 11.7215ZM31.5443 16.3038C30.5316 16.3038 29.7975 16.6835 29.3671 17.3418V14H26.8101V20.2025C26.8101 23.5696 24.8861 25.1646 23.1392 25.1646C21.8481 25.1646 21.3165 24.2785 21.3165 21.2405C21.3165 18.2025 21.6456 16.8354 22.6835 16.8354C23.3671 16.8354 23.9494 17.4937 24.5316 19.0127H25.1646V16.7595C24.4051 16.4557 23.4684 16.3038 22.7342 16.3038C20.1266 16.3038 18.6582 18.1772 18.6582 21.2405C18.6582 24.2785 20.1266 26 22.6076 26C24.6582 26 26.1266 24.9114 26.8101 23.0633V25.7722H29.3671V18.8861C29.3671 17.8228 29.9494 17.2911 30.557 17.2911C31.1392 17.2911 31.3418 17.7722 31.3418 18.5063V25.7975H33.8987V18.9873C33.8987 17.0886 32.962 16.3038 31.5443 16.3038ZM19.4177 0.253165V12.0506H21.9747V0.253165H19.4177ZM28.6329 0.253165V3.46835C28.4051 2.91139 27.8481 2.55696 26.962 2.55696C24.962 2.55696 23.6203 4.35443 23.6203 7.36709C23.6203 10.4557 24.8101 12.2532 26.8608 12.2532C27.8228 12.2532 28.481 11.7975 28.7848 10.8608V12.0253H31.1646V0.253165H28.6329ZM27.3671 11.519C26.557 11.519 26.2785 10.7089 26.2785 7.34177C26.2785 4.17722 26.557 3.24051 27.4177 3.24051C28.3544 3.24051 28.6835 4.35443 28.6835 7.34177C28.6835 10.3544 28.2532 11.519 27.3671 11.519ZM42.2025 2.55696C41.0633 2.55696 40.2278 3.16456 39.8734 4C39.519 3.03797 38.8101 2.55696 37.7975 2.55696C36.7089 2.55696 35.924 3.03797 35.5443 3.82278V2.78481H33.1646V12.0506H35.6962V5.13924C35.6962 4.07595 36.2025 3.5443 36.8354 3.5443C37.3671 3.5443 37.5949 3.97468 37.5949 4.70886V12.0506H40.1519V5.13924C40.1519 4.07595 40.6582 3.5443 41.2911 3.5443C41.8228 3.5443 42.0506 3.97468 42.0506 4.70886V12.0506H44.6076V5.24051C44.6076 3.34177 43.6456 2.55696 42.2025 2.55696ZM40.1013 20.3544L38.6329 19.4684C37.6456 18.8861 37.2911 18.5316 37.2911 17.9241C37.2911 17.2405 37.7722 16.8101 38.5823 16.8101C39.5443 16.8101 40.2532 17.443 40.6835 18.9873H41.3165V16.6076C40.5063 16.4304 39.5949 16.2785 38.7848 16.2785C36.7342 16.2785 35.4937 17.2911 35.4937 18.9367C35.4937 20.076 36.1266 20.8608 37.4177 21.6456L38.6329 22.3797C39.6456 22.9873 40 23.4177 40 24.1013C40 24.9873 39.443 25.443 38.481 25.443C37.2911 25.443 36.6076 24.6835 36.1519 23.0127H35.519V25.6203C36.4557 25.8734 37.443 25.9747 38.2532 25.9747C40.5823 25.9747 41.9241 24.8861 41.9241 23.0633C41.8987 21.8228 41.2911 21.0633 40.1013 20.3544ZM49.8481 2.55696C48.8861 2.55696 47.7468 2.73418 46.6835 3.06329V5.24051H47.3165C47.8481 3.87342 48.557 3.11392 49.5696 3.11392C50.2025 3.11392 50.4557 3.41772 50.4557 4.12658V5.31646C50.4557 5.89873 50.3038 6.07595 49.6456 6.3038L48.962 6.53165C46.9367 7.21519 46.0253 8.10127 46.0253 9.6962C46.0253 11.3924 47.038 12.2785 48.5063 12.2785C49.5443 12.2785 50.4304 11.8228 50.7089 10.9367V12.0506H53.038V5.31646C53.0127 3.49367 51.924 2.55696 49.8481 2.55696ZM50.4557 9.56962C50.4557 10.7848 50.0506 11.3418 49.4177 11.3418C48.8101 11.3418 48.6076 10.8608 48.6076 9.62025V9.36709C48.6076 7.92405 48.9114 7.34177 49.7468 6.91139L50.4557 6.55696V9.56962ZM59.6709 2.55696C58.557 2.55696 57.7468 3.03797 57.3418 3.82278V2.78481H54.9367V12.0506H57.4937V5.11392C57.4937 4.05063 58.076 3.51899 58.6835 3.51899C59.2658 3.51899 59.4684 4 59.4684 4.73418V12.0253H62.0253V5.24051C62.0253 3.34177 61.0886 2.55696 59.6709 2.55696ZM9.06329 21.8228C9.06329 24.2025 7.34177 25.7975 4.58228 25.7975H0.531646V21.5696H1.13924C1.6962 24.0759 2.73418 25.1899 4.48101 25.1899C5.89873 25.1899 6.65823 24.4304 6.65823 23.1899C6.65823 21.8734 5.8481 21.2658 4.65823 20.5823L2.86076 19.519C1.34177 18.6329 0.481013 17.5443 0.481013 16.0253C0.481013 14.3291 1.46835 13.2405 3.06329 12.7848C0.810127 12.1772 0 10.1266 0 6.48101C0 2.32911 1.72152 0 5.24051 0H8.50633V3.49367H7.87342C7.11392 1.26582 6.4557 0.582278 5.26582 0.582278C3.51899 0.582278 3.03797 2.4557 3.03797 6.58228C3.03797 11.3418 3.46835 12.4051 4.75949 12.4051C5.74684 12.4051 6.22785 11.7722 6.22785 10.2785V8.4557C6.22785 7.34177 5.87342 6.93671 4.70886 6.75949V6.17722H8.6076V16.1266H8.02532C7.13924 13.6203 6 13.0633 4.73418 13.0633C3.49367 13.0633 2.73418 13.6456 2.73418 14.7848C2.73418 15.8481 3.36709 16.3544 4.55696 17.0633L6.50633 18.2278C8.05063 19.1899 9.06329 20.0759 9.06329 21.8228ZM13.9747 16.3038C13.0127 16.3038 11.8734 16.481 10.8101 16.8101V18.9873H11.443C11.9747 17.6203 12.6835 16.8608 13.6962 16.8608C14.3291 16.8608 14.5823 17.1646 14.5823 17.8734V19.038C14.5823 19.6203 14.4304 19.7975 13.7722 20.0253L13.0886 20.2532C11.0633 20.9367 10.1519 21.8228 10.1519 23.4177C10.1519 25.1139 11.1646 26 12.6329 26C13.6709 26 14.557 25.5443 14.8354 24.6582V25.7722H17.1392V19.0886C17.1392 17.2405 16.0253 16.3038 13.9747 16.3038ZM14.5823 23.3165C14.5823 24.5316 14.1772 25.0886 13.5443 25.0886C12.9367 25.0886 12.7342 24.6076 12.7342 23.3671V23.1139C12.7342 21.6709 13.038 21.0886 13.8734 20.6582L14.5823 20.3038V23.3165Z" fill="black" fill-opacity="0.95"></path>
+                            </svg>
+                        </span>
+                    </a>
+                </li>
+             
+            </ul>
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                  <a class="nav-link active" href="#">
+                      <span style="display: inline-flex;">
+                          <svg
+                              width="63"
+                              height="26"
+                              viewBox="0 0 63 26"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                          >
+                              <title>GoldmanSachs Logo</title>
+                              <path d="M14 2.55696C11.6203 2.55696 10.1519 4.35443 10.1519 7.41772C10.1519 10.4557 11.6203 12.2785 14 12.2785C16.3797 12.2785 17.8481 10.481 17.8481 7.41772C17.8481 4.35443 16.4051 2.55696 14 2.55696ZM14 11.7215C13.0886 11.7215 12.8101 10.7342 12.8101 7.39241C12.8101 4.05063 13.0886 3.06329 14 3.06329C14.9114 3.06329 15.1899 4.07595 15.1899 7.41772C15.1899 10.7342 14.9114 11.7215 14 11.7215ZM31.5443 16.3038C30.5316 16.3038 29.7975 16.6835 29.3671 17.3418V14H26.8101V20.2025C26.8101 23.5696 24.8861 25.1646 23.1392 25.1646C21.8481 25.1646 21.3165 24.2785 21.3165 21.2405C21.3165 18.2025 21.6456 16.8354 22.6835 16.8354C23.3671 16.8354 23.9494 17.4937 24.5316 19.0127H25.1646V16.7595C24.4051 16.4557 23.4684 16.3038 22.7342 16.3038C20.1266 16.3038 18.6582 18.1772 18.6582 21.2405C18.6582 24.2785 20.1266 26 22.6076 26C24.6582 26 26.1266 24.9114 26.8101 23.0633V25.7722H29.3671V18.8861C29.3671 17.8228 29.9494 17.2911 30.557 17.2911C31.1392 17.2911 31.3418 17.7722 31.3418 18.5063V25.7975H33.8987V18.9873C33.8987 17.0886 32.962 16.3038 31.5443 16.3038ZM19.4177 0.253165V12.0506H21.9747V0.253165H19.4177ZM28.6329 0.253165V3.46835C28.4051 2.91139 27.8481 2.55696 26.962 2.55696C24.962 2.55696 23.6203 4.35443 23.6203 7.36709C23.6203 10.4557 24.8101 12.2532 26.8608 12.2532C27.8228 12.2532 28.481 11.7975 28.7848 10.8608V12.0253H31.1646V0.253165H28.6329ZM27.3671 11.519C26.557 11.519 26.2785 10.7089 26.2785 7.34177C26.2785 4.17722 26.557 3.24051 27.4177 3.24051C28.3544 3.24051 28.6835 4.35443 28.6835 7.34177C28.6835 10.3544 28.2532 11.519 27.3671 11.519ZM42.2025 2.55696C41.0633 2.55696 40.2278 3.16456 39.8734 4C39.519 3.03797 38.8101 2.55696 37.7975 2.55696C36.7089 2.55696 35.924 3.03797 35.5443 3.82278V2.78481H33.1646V12.0506H35.6962V5.13924C35.6962 4.07595 36.2025 3.5443 36.8354 3.5443C37.3671 3.5443 37.5949 3.97468 37.5949 4.70886V12.0506H40.1519V5.13924C40.1519 4.07595 40.6582 3.5443 41.2911 3.5443C41.8228 3.5443 42.0506 3.97468 42.0506 4.70886V12.0506H44.6076V5.24051C44.6076 3.34177 43.6456 2.55696 42.2025 2.55696ZM40.1013 20.3544L38.6329 19.4684C37.6456 18.8861 37.2911 18.5316 37.2911 17.9241C37.2911 17.2405 37.7722 16.8101 38.5823 16.8101C39.5443 16.8101 40.2532 17.443 40.6835 18.9873H41.3165V16.6076C40.5063 16.4304 39.5949 16.2785 38.7848 16.2785C36.7342 16.2785 35.4937 17.2911 35.4937 18.9367C35.4937 20.076 36.1266 20.8608 37.4177 21.6456L38.6329 22.3797C39.6456 22.9873 40 23.4177 40 24.1013C40 24.9873 39.443 25.443 38.481 25.443C37.2911 25.443 36.6076 24.6835 36.1519 23.0127H35.519V25.6203C36.4557 25.8734 37.443 25.9747 38.2532 25.9747C40.5823 25.9747 41.9241 24.8861 41.9241 23.0633C41.8987 21.8228 41.2911 21.0633 40.1013 20.3544ZM49.8481 2.55696C48.8861 2.55696 47.7468 2.73418 46.6835 3.06329V5.24051H47.3165C47.8481 3.87342 48.557 3.11392 49.5696 3.11392C50.2025 3.11392 50.4557 3.41772 50.4557 4.12658V5.31646C50.4557 5.89873 50.3038 6.07595 49.6456 6.3038L48.962 6.53165C46.9367 7.21519 46.0253 8.10127 46.0253 9.6962C46.0253 11.3924 47.038 12.2785 48.5063 12.2785C49.5443 12.2785 50.4304 11.8228 50.7089 10.9367V12.0506H53.038V5.31646C53.0127 3.49367 51.924 2.55696 49.8481 2.55696ZM50.4557 9.56962C50.4557 10.7848 50.0506 11.3418 49.4177 11.3418C48.8101 11.3418 48.6076 10.8608 48.6076 9.62025V9.36709C48.6076 7.92405 48.9114 7.34177 49.7468 6.91139L50.4557 6.55696V9.56962ZM59.6709 2.55696C58.557 2.55696 57.7468 3.03797 57.3418 3.82278V2.78481H54.9367V12.0506H57.4937V5.11392C57.4937 4.05063 58.076 3.51899 58.6835 3.51899C59.2658 3.51899 59.4684 4 59.4684 4.73418V12.0253H62.0253V5.24051C62.0253 3.34177 61.0886 2.55696 59.6709 2.55696ZM9.06329 21.8228C9.06329 24.2025 7.34177 25.7975 4.58228 25.7975H0.531646V21.5696H1.13924C1.6962 24.0759 2.73418 25.1899 4.48101 25.1899C5.89873 25.1899 6.65823 24.4304 6.65823 23.1899C6.65823 21.8734 5.8481 21.2658 4.65823 20.5823L2.86076 19.519C1.34177 18.6329 0.481013 17.5443 0.481013 16.0253C0.481013 14.3291 1.46835 13.2405 3.06329 12.7848C0.810127 12.1772 0 10.1266 0 6.48101C0 2.32911 1.72152 0 5.24051 0H8.50633V3.49367H7.87342C7.11392 1.26582 6.4557 0.582278 5.26582 0.582278C3.51899 0.582278 3.03797 2.4557 3.03797 6.58228C3.03797 11.3418 3.46835 12.4051 4.75949 12.4051C5.74684 12.4051 6.22785 11.7722 6.22785 10.2785V8.4557C6.22785 7.34177 5.87342 6.93671 4.70886 6.75949V6.17722H8.6076V16.1266H8.02532C7.13924 13.6203 6 13.0633 4.73418 13.0633C3.49367 13.0633 2.73418 13.6456 2.73418 14.7848C2.73418 15.8481 3.36709 16.3544 4.55696 17.0633L6.50633 18.2278C8.05063 19.1899 9.06329 20.0759 9.06329 21.8228ZM13.9747 16.3038C13.0127 16.3038 11.8734 16.481 10.8101 16.8101V18.9873H11.443C11.9747 17.6203 12.6835 16.8608 13.6962 16.8608C14.3291 16.8608 14.5823 17.1646 14.5823 17.8734V19.038C14.5823 19.6203 14.4304 19.7975 13.7722 20.0253L13.0886 20.2532C11.0633 20.9367 10.1519 21.8228 10.1519 23.4177C10.1519 25.1139 11.1646 26 12.6329 26C13.6709 26 14.557 25.5443 14.8354 24.6582V25.7722H17.1392V19.0886C17.1392 17.2405 16.0253 16.3038 13.9747 16.3038ZM14.5823 23.3165C14.5823 24.5316 14.1772 25.0886 13.5443 25.0886C12.9367 25.0886 12.7342 24.6076 12.7342 23.3671V23.1139C12.7342 21.6709 13.038 21.0886 13.8734 20.6582L14.5823 20.3038V23.3165Z" fill="black" fill-opacity="0.95"></path>
+                          </svg>
+                      </span>
+                  </a>
+              </li>
+           
+          </ul>
+                  </div>
+    </div>
+</nav>
+<!-- FOOTER 1 END -->
+    <!-- FOOTER 2 START -->
+    <nav class="navbar navbar-expand-lg" data-bs-theme="dark" style="background-color: black;">
+      <div class="container-fluid nav">
+          <div class="collapse navbar-collapse" id="navbarColor02">
+              <ul class="navbar-nav me-auto">
+                  <li class="nav-item" style="float: left;">
+                      <a class="nav-link active" href="#" style="color: white;">
+                          <span style="display: inline-flex;">
+                              Copyright
+                          </span>
+                      </a>
                   </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">About</a>
+                  <li class="nav-item" style="float: right;">
+                      <a class="nav-link" href="#"  style="color: white;">About</a>
                   </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">Contact</a>
+                  <li class="nav-item" style="float: right;">
+                      <a class="nav-link" href="#" style="color: white;">Speakers</a>
                   </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">Extra</a>
+                  <li class="nav-item" style="float: right;">
+                      <a class="nav-link" href="#" style="color: white;">Agenda</a>
                   </li>
+                  <li class="nav-item" style="float: right;">
+                      <a class="nav-link" href="#" style="color: white;">Additional Details</a>
+                  </li>
+                  <li class="nav-item" style="float: right;">
+                    <a class="nav-link" href="#" style="color: white;">Agenda</a>
+                </li>
+                <li class="nav-item" style="float: right;">
+                    <a class="nav-link" href="#" style="color: white;">Additional Details</a>
+                </li>
               </ul>
           </div>
       </div>
-  </section>
-    </body>
-</html>
+  </nav>
+  <!-- FOOTER 2 END -->
+
+
+
+        </body>
+    </html>
