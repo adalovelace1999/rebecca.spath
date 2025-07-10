@@ -1,0 +1,310 @@
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css');
+
+@font-face {
+    font-family: GS Sans;
+    src: url(https://cdn.gs.com/fonts/gs-sans/v1/gs-sans-variable.woff2) format("woff2");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: GS Sans;
+    src: url(https://cdn.gs.com/fonts/gs-sans/v1/gs-sans-variable-italic.woff2) format("woff2");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: GS Sans Condensed;
+    src: url(https://cdn.gs.com/fonts/gs-sans/v1/gs-sans-condensed-variable.woff2) format("woff2");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: GS Sans Condensed;
+    src: url(https://cdn.gs.com/fonts/gs-sans/v1/gs-sans-condensed-variable-italic.woff2 );
+    font-style: italic;
+}
+
+@font-face {
+    font-family: GS Serif;
+    src: url(https://cdn.gs.com/fonts/gs-serif/v1/gs-serif-variable.woff2) format("woff2");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: GS Serif;
+    src: url(https://cdn.gs.com/fonts/gs-serif/v1/gs-serif-variable-italic.woff2) format("woff2");
+    font-style: italic;
+}
+
+body {
+    font-weight: 400;
+    font-family: "GS Sans", Helvetica, Arial, sans-serif;
+    color: rgb(0, 0, 0, .95);
+}
+
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl .jumbotron,
+.nav,
+.main {
+    margin: 0;
+}
+
+div.col-lg-1 {
+    padding: 0;
+}
+
+h1 {
+    font-family: "GS Serif", Times, "Times New Roman", serif;
+    font-size: 80px;
+    line-height: 80px;
+    font-weight: 300;
+}
+
+h2 {
+    font-family: "GS Sans Condensed", "Trebuchet MS", sans-serif;
+    font-size: 40px;
+    line-height: 60px;
+    font-weight: 300;
+}
+
+h3 {
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+h4 {
+    font-family: "GS Sans Condensed", "Trebuchet MS", sans-serif;
+    font-size: 30px;
+    line-height: 30px;
+}
+
+p {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+p.disclaimer {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+p.disclaimer:last-child {
+    padding-bottom: 0;
+}
+
+.detail_link {
+    background-color: #F7F7FA;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    padding: 16px 0px 0px 10px;
+}
+
+.active {
+    background-color: none;
+}
+nav {
+    background-color: #7297C5;
+}
+.nav-link {
+    font-size: 16px;
+    line-height: 20px;
+    color: rgb(0, 0, 0, .8);
+    vertical-align: middle;
+}
+
+nav.navbar.navbar-expand-lg {
+    padding: 10px 0px 10px;
+}
+
+div.container-fluid.nav,
+.jumbotron {
+    /* margin: 0px 40px; */
+    padding: 0px;
+    
+}
+
+.btn {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 2px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.btn-light {
+    background-color: rgb(255, 255, 255, .95);
+    color: rgb(0, 0, 0, .95);
+    --bs-btn-border-color: #f8f9fa;
+}
+
+.btn-dark {
+    background-color: rgb(0, 0, 0, .95);
+    --bs-btn-border-color: rgb(0, 0, 0, .95);
+    color: rgb(255, 255, 255, .95);
+}
+
+.card {
+    border: none;
+}
+
+div p.card-text {
+    padding-bottom: 0;
+}
+div p.card-text:first-child {
+    font-weight: 500;
+}
+
+div.card-body {
+    padding-left: 0;
+    padding-right: 10px;
+    background-color: #F7F7FA;
+}
+
+div.col-lg-3 {
+    padding-left: 0;
+    padding-right: 30px;
+}
+
+div.col-lg-3:last-child {
+    padding-right: 0px;
+}
+
+
+
+.hero {
+    margin: 0;
+    color: rgb(255, 255, 255, .95);
+    padding-top: 16%;
+}
+
+div.jumbotron.bg-image.container-fluid {
+    padding: 0;
+    margin: 0;
+}
+
+.row>* {
+    padding: 0px;
+}
+
+.table tr {
+    border-top: solid 1px #00000057;
+}
+
+.table>:not(caption)>*>* {
+    border-bottom-width: 0;
+    box-shadow: none;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.list-group {
+    border-radius: 0;
+}
+
+.bg-image {
+    background-image: url(https://fastly.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68);
+    width: 100%;
+    background-size: cover;
+}
+
+/* .hero {
+    margin: 0px 40px;
+} */
+
+.hero>h1,
+h2,
+p,
+button {
+    vertical-align: bottom;
+}
+
+.card_link {
+    color: rgb(0, 0, 0, .95);
+}
+
+div.col-lg-3 {
+    Padding-right: 10px;
+}
+
+.table tr td {
+    padding: 16px 0px;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.list-group-item {
+    border: none;
+}
+
+body > div:nth-child(11),
+footer {
+    background-color: #2A2927;
+}
+nav {
+    background-color: #7297C5;
+}
+div.jumbotron.container-fluid {
+    height: auto;
+}
+.hero {
+    padding: 200px 40px 40px;
+    vertical-align: bottom;
+}
+div.container-fluid.nav, .jumbotron.footer {
+margin: 0px;
+}
+
+
+
+.g-0.footer_logo,
+.card-body.footer_logo {
+    color:#F7F7FA; 
+    background-color: rgba(0, 0, 0, .95);
+    
+}
+.g-0.footer_logo p,
+.card-body.footer_logo p {
+font-size: 14px;
+line-height: 18px;
+text-align: right;
+}
+div.card.mb-3.footer_1 {
+    margin-bottom: 0rem;
+    margin-bottom: 0em;
+    margin-bottom: 0;
+    margin-bottom: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    .hide {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hero {
+        padding-top: 30%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .hero {
+        padding-top: 30%;
+    }
+}
+
+/*
+         Light blue.gray F7F7FA
+         Warm gray #F0EBE6
+         */
